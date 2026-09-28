@@ -1,0 +1,63 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    text-align: center;
+    background-color: #212121;
+}
+
+#lockercontainer{
+    margin-top: 40px;
+    /* border: blue 5px dashed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#lockerlabel{
+
+    background-color: #de4e4e;
+    width: 300px;
+    height: 300px;
+    
+}
+#container{
+    
+    background-color: #212121;
+    /* border: blue 5px dashed; */
+    /* background-image: linear-gradient(#292a30 1em, transparent 1em),
+    linear-gradient(90deg, #292a30 1em, transparent 1em); */
+    /* background-size: 4em 4em; */
+   
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+#card{
+    
+    width: 100px;
+    height: 100px;
+    background-color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    border: rgb(0, 204, 255) 5px dashed;
+    
+}
+
+
+#testbutton{
+    font-size: 3em;
+    padding: 5px 25px;
+    border-radius: 15px;
+}
+#mylabel{
+    font-size: 3em;
+}
