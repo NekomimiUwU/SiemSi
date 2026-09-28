@@ -30,6 +30,21 @@ function mouseUp(e){
 }
 
 
+//Mobile Version below
+
+window.onload = function() {
+    var card1 = document.getElementById("card")
+
+    card1.addEventListener('touchmove', function(ev){
+        var touchlocation = ev.targetTouches[0];
+
+        card1.style.left = touchlocation.pageX + 'px';
+        card1.style.top = touchlocation.pageY + 'px';
+    })
+}
+
+
+
 
 
 
