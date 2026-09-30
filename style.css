@@ -1,10 +1,13 @@
 body{
+
+    height: 100vh;
     padding: 0;
     margin: 0;
     font-family: Verdana;
-    text-align: center;
-    background-color: #212121;
+    background: repeating-linear-gradient(180deg, #1a1a1a , #292929);
+    overflow-y: hidden;
 }
+
 
 #lockercontainer{
 
@@ -18,6 +21,7 @@ body{
 }
 #lockerlabel{
 
+    display: flex;
     background-color: #de4e4e;
     width: 300px;
     height: 300px;
@@ -28,7 +32,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
+    
 
 }
 #result{
@@ -54,7 +58,7 @@ body{
 
 #container{
     
-    background-color: #212121;
+    
     /* border: blue 5px dashed; */
     /* background-image: linear-gradient(#292a30 1em, transparent 1em),
     linear-gradient(90deg, #292a30 1em, transparent 1em); */
