@@ -72,15 +72,21 @@ body{
  
 }
 
-#card{
 
-    width: 100px;
-    height: 100px;
-    background-color: azure;
-    border-radius: 5px;
+
+#card{
+    
+    width: 200px;
+    height: 210px;
+    background-image: url("img/siemsi.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(45deg);
+    /* border-radius: 5px; */
     cursor: pointer;
     position: absolute;
-    border: rgb(0, 204, 255) 5px dashed;
+    /* border: rgb(0, 204, 255) 5px dashed; */
+    
     
 }
 
