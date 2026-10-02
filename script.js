@@ -115,16 +115,96 @@ card.addEventListener("touchend", function (e) {
     randomNum = Math.floor(Math.random() * max) + min;
     console.log(randomNum);
     
-    if (randomNum = 1){
-        //result.style.visibility = "visible";
+    if (randomNum == 1){
+        result.style.visibility = "visible";
     }
-
-    if (randomNum = 2){
-        //result2.style.visibility = "visible";
+    if (randomNum == 2){
+        result2.style.visibility = "visible";
     }
-
-    
-
+    if (randomNum == 3){
+        result3.style.visibility = "visible";
+    }
+    if (randomNum == 4){
+        result4.style.visibility = "visible";
+    }
+    if (randomNum == 5){
+        result5.style.visibility = "visible";
+    }
+    if (randomNum == 6){
+        result6.style.visibility = "visible";
+    }
+    if (randomNum == 7){
+        result7.style.visibility = "visible";
+    }
+    if (randomNum == 8){
+        result8.style.visibility = "visible";
+    }
+    if (randomNum == 9){
+        result9.style.visibility = "visible";
+    }
+    if (randomNum == 10){
+        result10.style.visibility = "visible";
+    }
+    if (randomNum == 11){
+        result11.style.visibility = "visible";
+    }
+    if (randomNum == 12){
+        result12.style.visibility = "visible";
+    }
+    if (randomNum == 13){
+        result12.style.visibility = "visible";
+    }
+    if (randomNum == 14){
+        result14.style.visibility = "visible";
+    }
+    if (randomNum == 15){
+        result15.style.visibility = "visible";
+    }
+    if (randomNum == 16){
+        result16.style.visibility = "visible";
+    }
+    if (randomNum == 17){
+        result17.style.visibility = "visible";
+    }
+    if (randomNum == 18){
+        result18.style.visibility = "visible";
+    }
+    if (randomNum == 19){
+        result19.style.visibility = "visible";
+    }
+    if (randomNum == 20){
+        result20.style.visibility = "visible";
+    }
+    if (randomNum == 21){
+        result21.style.visibility = "visible";
+    }
+    if (randomNum == 22){
+        result22.style.visibility = "visible";
+    }
+    if (randomNum == 23){
+        result23.style.visibility = "visible";
+    }
+    if (randomNum == 24){
+        result24.style.visibility = "visible";
+    }
+    if (randomNum == 25){
+        result25.style.visibility = "visible";
+    }
+    if (randomNum == 26){
+        result26.style.visibility = "visible";
+    }
+    if (randomNum == 27){
+        result27.style.visibility = "visible";
+    }
+    if (randomNum == 28){
+        result28.style.visibility = "visible";
+    }
+    if (randomNum == 29){
+        result29.style.visibility = "visible";
+    }
+    if (randomNum == 30){
+        result30.style.visibility = "visible";
+    }
 
 });
 
