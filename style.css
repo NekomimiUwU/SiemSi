@@ -4,7 +4,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: Verdana;
-    background: repeating-linear-gradient(180deg, #670a6c , #b465c2);
+    background: repeating-linear-gradient(180deg, #a70a0a , #a0203e);
     overflow-y: hidden;
 }
 
@@ -40,13 +40,313 @@ body{
 
     z-index: 1;
     position: absolute;
-    width: 350px;
-    height: 400px;
-    border: blue 5px dashed;
+    margin-top: 800px;
+    width: 100px;
+    height: 600px;
+    background-color: azure;
+    
 
 }
 
+.animate{
+    /* animation-name: example;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; */
+
+    animation: example 1s ease-in forwards;
+    
+}
+
+@keyframes example{
+    from{
+        transform: translateY(0px);
+        
+    }
+    to{
+        transform: translateY(-400px);
+        animation-play-state: paused;
+        
+        
+    }
+}
+
 #result2{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result3{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result4{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result5{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+#result6{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+#result7{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+#result8{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+#result9{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result10{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result11{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result12{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result13{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result14{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result15{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result16{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result17{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result18{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result19{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result20{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result21{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result22{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result23{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result24{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result25{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result26{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result27{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result28{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result29{
+
+    z-index: 1;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border: rgb(255, 234, 0) 5px dashed;
+
+}
+
+#result30{
 
     z-index: 1;
     position: absolute;

@@ -40,7 +40,35 @@ window.onload = function(){
     
     result.style.visibility = "hidden"
     result2.style.visibility = "hidden"
-    
+    result3.style.visibility = "hidden"
+    result4.style.visibility = "hidden"
+    result5.style.visibility = "hidden"
+    result6.style.visibility = "hidden"
+    result7.style.visibility = "hidden"
+    result8.style.visibility = "hidden"
+    result9.style.visibility = "hidden"
+    result10.style.visibility = "hidden"
+    result11.style.visibility = "hidden"
+    result12.style.visibility = "hidden"
+    result13.style.visibility = "hidden"
+    result14.style.visibility = "hidden"
+    result15.style.visibility = "hidden"
+    result16.style.visibility = "hidden"
+    result17.style.visibility = "hidden"
+    result18.style.visibility = "hidden"
+    result19.style.visibility = "hidden"
+    result20.style.visibility = "hidden"
+    result21.style.visibility = "hidden"
+    result22.style.visibility = "hidden"
+    result23.style.visibility = "hidden"
+    result24.style.visibility = "hidden"
+    result25.style.visibility = "hidden"
+    result26.style.visibility = "hidden"
+    result27.style.visibility = "hidden"
+    result28.style.visibility = "hidden"
+    result29.style.visibility = "hidden"    
+    result30.style.visibility = "hidden"
+
 }
 
 function mouseDown(e){
@@ -80,7 +108,7 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 30;
+const max = 1;
 let randomNum;
 
 
@@ -114,9 +142,12 @@ card.addEventListener("touchend", function (e) {
     console.log("Touch cancelled");
     randomNum = Math.floor(Math.random() * max) + min;
     console.log(randomNum);
+
+    const aniresult = document.querySelector('#result');
     
     if (randomNum == 1){
         result.style.visibility = "visible";
+        aniresult.classList.add('animate');
     }
     if (randomNum == 2){
         result2.style.visibility = "visible";
