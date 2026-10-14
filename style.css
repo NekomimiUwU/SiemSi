@@ -5,35 +5,55 @@ body{
     margin: 0;
     font-family: Verdana;
     background: repeating-linear-gradient(180deg, #a70a0a , #a0203e);
-    overflow-y: hidden;
+    overflow: hidden;
+    
+
 }
 
 
 #lockercontainer{
 
-    margin-top: 40px;
+    
     /* border: blue 5px dashed; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
+    width: auto;
+    height: auto;
+    
+    
+    
     
 }
 #lockerlabel{
 
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
     display: flex;
-    background-color: #de4e4e;
-    width: 300px;
-    height: 300px;
+    width: 356px;
+    height: 356px;
+    background-image: url("img/locker.png");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: 356px;
+    
+    
+    
     
 }
-#resultcontainer{
-
+#resultcontainer{ 
     display: flex;
     justify-content: center;
     align-items: center;
     
+}
+#cardcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 #result{
@@ -57,8 +77,10 @@ body{
     animation-duration: 1s;
     animation-timing-function: ease-in; */
 
-    animation: example 1s ease-out forwards;
-    
+    animation: example 1s ease-out forwards;  
+}
+.animateslidein{
+    animation: slidein 2s ease-out forwards;  
 }
 
 @keyframes example{
@@ -70,9 +92,22 @@ body{
         transform: translateY(-400px);
         animation-play-state: paused;
         
+    }
+}
+
+@keyframes slidein{
+    from{
+        transform: translateX(0px);
+        
+    }
+    to{
+        transform: translateX(-400px);
+        animation-play-state: paused;
         
     }
 }
+
+
 
 #result2{
 
@@ -95,7 +130,7 @@ body{
     margin-top: 1400px;
     width: 80%;
     height: 600px;
-    border: rgb(255, 234, 0) 5px dashed;
+    /* border: rgb(255, 234, 0) 5px dashed; */
     background-image: url("img/stick3.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -477,6 +512,18 @@ body{
     background-size: 512px;
 
 }
+#card1{
+
+    margin-left: 800px;
+    z-index: 3;
+    width: 80%;
+    height: 500px;
+    background-image: url("img/TestCard.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+
+}
 
 
 #container{
@@ -502,7 +549,7 @@ body{
 
 
 
-#card{
+#siemsicontainer{
     
     width: 200px;
     height: 210px;
@@ -515,6 +562,21 @@ body{
     /* transform: rotate(45deg); */
     /* border-radius: 5px; */
     /* border: rgb(0, 204, 255) 5px dashed; */
+    
+    
+}
+
+#backdrop{
+    
+
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.685);
+    background-position: center;
+    display: flex;
+    width: 600px;
+    height: 100vh;
+    padding-top: 500px;
     
     
 }
