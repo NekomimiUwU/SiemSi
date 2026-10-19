@@ -1,6 +1,6 @@
 let newX = 0, newY = 0, startX = 0 ,startY = 0;
 
-const card = document.getElementById("siemsicontainer")
+const card = document.getElementById("siemsigroup")
 const result = document.getElementById("result")
 const result2 = document.getElementById("result2")
 const result3 = document.getElementById("result3")
@@ -32,6 +32,8 @@ const result28 = document.getElementById("result28")
 const result29 = document.getElementById("result29")
 const result30 = document.getElementById("result30")
 
+const stick1 = document.getElementById("stick1")
+
 const backdrop = document.getElementById("backdrop")
 
 
@@ -39,6 +41,8 @@ card.addEventListener('mousedown' , mouseDown)
 
 window.onload = function(){
     
+    stick1.style.visibility = "hidden"
+
     result.style.visibility = "hidden"
     result2.style.visibility = "hidden"
     result3.style.visibility = "hidden"
@@ -112,11 +116,72 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 30;
+const max = 1;
 let randomNum;
 
+let seconds = 0;
+let timer = null;
+let canMove = true;
 
 card.addEventListener("touchstart", function(e){
+
+    if (timer !== null) return; // Prevent duplicate timers
+
+    seconds = 5;
+    
+
+    timer = setInterval(() => {
+        seconds--;
+                    if (seconds <= 0) {
+                        
+                    console.log("5 seconds reached!");
+                    stopCounting();
+
+                }
+        console.log(seconds + " seconds");
+    }, 1000);
+
+
+
+
+
+    holdTimer = setTimeout(() => {
+        console.log("Held for 5 second!");
+        
+        randomNum = Math.floor(Math.random() * max) + min;
+        console.log(randomNum);
+
+        const stick1ani = document.querySelector('#stick1');
+
+        // const aniresult = document.querySelector('#result');
+
+        if (randomNum == 1){
+
+            stick1.style.visibility = "visible"
+            stopMoving();
+
+            stick1ani.classList.add('animatepopup');
+
+            
+
+
+
+
+            // result.style.visibility = "visible";
+            // aniresult.classList.add('animate');
+
+            // Put your action here
+
+            // aniresult.addEventListener("animationend", () => {
+            //     console.log("animationended")
+            //     backdrop.style.visibility = "visible"
+            //     card1.classList.add('animateslidein');
+                
+            // }, {once:true});
+
+    }
+
+            }, 5000);
 
     const touch = e.touches[0];
     const rect = card.getBoundingClientRect();
@@ -127,27 +192,57 @@ card.addEventListener("touchstart", function(e){
     console.log("Touch X:", offsetX);
     console.log("Touch Y:", offsetY);
     // console.log("Start")
+
 });
+
+function stopCounting() {
+    clearInterval(timer);
+    timer = null;
+}
+
+function stopMoving() {
+
+    canMove = false;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 card.addEventListener("touchmove", function (e) {
     e.preventDefault();
 
     const touch = e.touches[0];
-
-    card.style.left = (touch.clientX - offsetX) + "px";
-    card.style.top  = (touch.clientY - offsetY) + "px";
-   
+    if (!canMove) return;
+        card.style.left = (touch.clientX - offsetX) + "px";
+        card.style.top  = (touch.clientY - offsetY) + "px";
+        console.log("Moving...");
+    // Your touch movement logic here
 });
+    
+    
+   
+
 
 
 
 card.addEventListener("touchend", function (e) {
 
-    console.log("Touch cancelled");
-    randomNum = Math.floor(Math.random() * max) + min;
-    console.log(randomNum);
 
-    const aniresult = document.querySelector('#result');
+    console.log("Touch cancelled");
+    // randomNum = Math.floor(Math.random() * max) + min;
+    // console.log(randomNum);
+
+    clearTimeout(holdTimer);
+    stopCounting();
+    
     const aniresult2 = document.querySelector('#result2');
     const aniresult3 = document.querySelector('#result3');
     const aniresult4 = document.querySelector('#result4');
@@ -180,19 +275,7 @@ card.addEventListener("touchend", function (e) {
     
     const card1 = document.querySelector('#card1');
 
-    if (randomNum == 1){
-        result.style.visibility = "visible";
-        aniresult.classList.add('animate');
-
-        aniresult.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
-            
-        }, {once:true});
-
-
-    }
+    
     if (randomNum == 2){
         result2.style.visibility = "visible";
         aniresult2.classList.add('animate');
