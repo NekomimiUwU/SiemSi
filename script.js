@@ -36,6 +36,7 @@ const stick1 = document.getElementById("stick1")
 
 const backdrop = document.getElementById("backdrop")
 
+const card1 = document.getElementById("card1")
 
 card.addEventListener('mousedown' , mouseDown)
 
@@ -76,6 +77,7 @@ window.onload = function(){
 
     backdrop.style.visibility = "hidden";
     
+    card1.style.visibility = "hidden";
 
 }
 
@@ -162,7 +164,21 @@ card.addEventListener("touchstart", function(e){
 
             stick1ani.classList.add('animatepopup');
 
-            
+            const card1 = document.querySelector('#card1');
+
+            stick1ani.addEventListener("animationend", () => {
+                // console.log("animationended")
+                card1.style.visibility = "visible";
+                // backdrop.style.visibility = "visible"
+                card1.classList.add('animatecardup');
+                
+                card1.addEventListener("animationend", () => {
+                    
+                    console.log("animationended")
+                    
+                    card1.classList.add('animatecardmove');    
+                }) 
+            }, {once:true});
 
 
 
@@ -172,16 +188,11 @@ card.addEventListener("touchstart", function(e){
 
             // Put your action here
 
-            // aniresult.addEventListener("animationend", () => {
-            //     console.log("animationended")
-            //     backdrop.style.visibility = "visible"
-            //     card1.classList.add('animateslidein');
-                
-            // }, {once:true});
+            
 
-    }
+        }
 
-            }, 5000);
+    }, 5000);
 
     const touch = e.touches[0];
     const rect = card.getBoundingClientRect();
@@ -273,7 +284,7 @@ card.addEventListener("touchend", function (e) {
     const aniresult29 = document.querySelector('#result29');
     const aniresult30 = document.querySelector('#result30');
     
-    const card1 = document.querySelector('#card1');
+    
 
     
     if (randomNum == 2){
