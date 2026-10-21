@@ -159,26 +159,37 @@ card.addEventListener("touchstart", function(e){
 
         if (randomNum == 1){
 
-            stick1.style.visibility = "visible"
-            stopMoving();
+            card1.style.visibility = "visible";
+            card1.classList.add('animatecardup');
 
-            stick1ani.classList.add('animatepopup');
-
-            const card1 = document.querySelector('#card1');
-
-            stick1ani.addEventListener("animationend", () => {
-                // console.log("animationended")
-                card1.style.visibility = "visible";
-                // backdrop.style.visibility = "visible"
-                card1.classList.add('animatecardup');
-                
-                card1.addEventListener("animationend", () => {
+            card1.addEventListener("animationend", () => {
                     
                     console.log("animationended")
                     
                     card1.classList.add('animatecardmove');    
-                }) 
-            }, {once:true});
+            })
+
+
+            
+            stopMoving();
+            // stick1.style.visibility = "visible"
+            // stick1ani.classList.add('animatepopup');
+            // const card1 = document.querySelector('#card1');
+
+            // stick1ani.addEventListener("animationend", () => {
+            //     // console.log("animationended")
+                
+            //     // backdrop.style.visibility = "visible"
+            //     card1.style.visibility = "visible";
+            //     card1.classList.add('animatecardup');
+                
+            //     card1.addEventListener("animationend", () => {
+                    
+            //         console.log("animationended")
+                    
+            //         card1.classList.add('animatecardmove');    
+            //     }) 
+            // }, {once:true});
 
 
 

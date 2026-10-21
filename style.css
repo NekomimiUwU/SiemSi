@@ -42,14 +42,14 @@ body{
     z-index: 1;
     width: 80%;
     height: 500px;
-    background-image: url("img/TestCard.png");
+    background-image: url("img/card01.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 30%;
+    background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    margin-right: 235px;
-    margin-bottom: 700px;
+    margin-right: 220px;
+    margin-bottom: 590px;
 
 
 }
@@ -62,7 +62,7 @@ body{
     display: flex;
     width: 356px;
     height: 356px;
-    background-image: url("img/locker.png");
+    background-image: url("img/siemsiconnumber.png");
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: 356px;
@@ -106,7 +106,7 @@ body{
 }
 
 .animatecardmove{
-    animation: cardmove 2s ease-out forwards;  
+    animation: cardmove 1.5s ease-out forwards;  
 }
 
 @keyframes example{
@@ -588,13 +588,14 @@ body{
 }
 
 #siemsicontainer{
-    padding-top: 300px;
+    padding-top: 200px;
     z-index: 2;
     width: 210px;
     height: 210px;
-    background-image: url("img/siemsi.png");
+    background-image: url("img/siemsicon.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 80%;
     cursor: pointer;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
