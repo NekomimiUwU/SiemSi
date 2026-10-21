@@ -129,18 +129,19 @@ card.addEventListener("touchstart", function(e){
 
     if (timer !== null) return; // Prevent duplicate timers
 
-    seconds = 5;
+    seconds = 3;
     
 
     timer = setInterval(() => {
         seconds--;
+        console.log(seconds + " seconds"); 
                     if (seconds <= 0) {
-                        
-                    console.log("5 seconds reached!");
+                       
+                    console.log("3 seconds reached!");
                     stopCounting();
 
                 }
-        console.log(seconds + " seconds");
+        
     }, 1000);
 
 
@@ -148,48 +149,49 @@ card.addEventListener("touchstart", function(e){
 
 
     holdTimer = setTimeout(() => {
-        console.log("Held for 5 second!");
+        console.log("Held for 3 second!");
         
         randomNum = Math.floor(Math.random() * max) + min;
         console.log(randomNum);
 
         const stick1ani = document.querySelector('#stick1');
 
-        // const aniresult = document.querySelector('#result');
+        //  const aniresult = document.querySelector('#result');
 
         if (randomNum == 1){
 
-            card1.style.visibility = "visible";
-            card1.classList.add('animatecardup');
+            // card1.style.visibility = "visible";
+            // card1.classList.add('animatecardup');
 
-            card1.addEventListener("animationend", () => {
-                    
-                    console.log("animationended")
-                    
-                    card1.classList.add('animatecardmove');    
-            })
-
-
-            
-            stopMoving();
-            // stick1.style.visibility = "visible"
-            // stick1ani.classList.add('animatepopup');
-            // const card1 = document.querySelector('#card1');
-
-            // stick1ani.addEventListener("animationend", () => {
-            //     // console.log("animationended")
-                
-            //     // backdrop.style.visibility = "visible"
-            //     card1.style.visibility = "visible";
-            //     card1.classList.add('animatecardup');
-                
-            //     card1.addEventListener("animationend", () => {
+            // card1.addEventListener("animationend", () => {
                     
             //         console.log("animationended")
                     
             //         card1.classList.add('animatecardmove');    
-            //     }) 
-            // }, {once:true});
+            // })
+
+
+            
+            stopMoving();
+
+            stick1.style.visibility = "visible"
+            stick1ani.classList.add('animatepopup');
+            const card1 = document.querySelector('#card1');
+
+            stick1ani.addEventListener("animationend", () => {
+                // console.log("animationended")
+                
+                // backdrop.style.visibility = "visible"
+                card1.style.visibility = "visible";
+                card1.classList.add('animatecardup');
+                
+                card1.addEventListener("animationend", () => {
+                    
+                    console.log("animationended")
+                    
+                    card1.classList.add('animatecardmove');    
+                }) 
+            }, {once:true});
 
 
 
@@ -203,7 +205,7 @@ card.addEventListener("touchstart", function(e){
 
         }
 
-    }, 5000);
+    }, 3000);
 
     const touch = e.touches[0];
     const rect = card.getBoundingClientRect();
