@@ -156,31 +156,16 @@ card.addEventListener("touchstart", function(e){
 
         const stick1ani = document.querySelector('#stick1');
 
-        //  const aniresult = document.querySelector('#result');
 
-        if (randomNum == 1){
+        if (randomNum == 1){ //ออกใบที่ 1
 
-            // card1.style.visibility = "visible";
-            // card1.classList.add('animatecardup');
-
-            // card1.addEventListener("animationend", () => {
-                    
-            //         console.log("animationended")
-                    
-            //         card1.classList.add('animatecardmove');    
-            // })
-
-
-            
             stopMoving();
 
             stick1.style.visibility = "visible"
             stick1ani.classList.add('animatepopup');
             const card1 = document.querySelector('#card1');
 
-            stick1ani.addEventListener("animationend", () => {
-                // console.log("animationended")
-                
+            stick1ani.addEventListener("animationend", () => {               
                 // backdrop.style.visibility = "visible"
                 card1.style.visibility = "visible";
                 card1.classList.add('animatecardup');
@@ -193,17 +178,32 @@ card.addEventListener("touchstart", function(e){
                 }) 
             }, {once:true});
 
+        }
 
+        if (randomNum == 2){ //ออกใบที่ 2
 
+            stopMoving();
 
-            // result.style.visibility = "visible";
-            // aniresult.classList.add('animate');
+            stick1.style.visibility = "visible"
+            stick1ani.classList.add('animatepopup');
+            const card1 = document.querySelector('#card1');
 
-            // Put your action here
-
-            
+            stick1ani.addEventListener("animationend", () => {               
+                // backdrop.style.visibility = "visible"
+                card1.style.visibility = "visible";
+                card1.classList.add('animatecardup');
+                
+                card1.addEventListener("animationend", () => {
+                    
+                    console.log("animationended")
+                    
+                    card1.classList.add('animatecardmove');    
+                }) 
+            }, {once:true});
 
         }
+
+
 
     }, 3000);
 
@@ -215,7 +215,7 @@ card.addEventListener("touchstart", function(e){
 
     console.log("Touch X:", offsetX);
     console.log("Touch Y:", offsetY);
-    // console.log("Start")
+    
 
 });
 
@@ -232,14 +232,6 @@ function stopMoving() {
 
 
 
-
-
-
-
-
-
-
-
 card.addEventListener("touchmove", function (e) {
     e.preventDefault();
 
@@ -247,8 +239,8 @@ card.addEventListener("touchmove", function (e) {
     if (!canMove) return;
         card.style.left = (touch.clientX - offsetX) + "px";
         card.style.top  = (touch.clientY - offsetY) + "px";
-        console.log("Moving...");
-    // Your touch movement logic here
+        // console.log("Moving...");
+    // สำหรับขยับ Div ที่รองรับ
 });
     
     
@@ -261,6 +253,7 @@ card.addEventListener("touchend", function (e) {
 
 
     console.log("Touch cancelled");
+
     // randomNum = Math.floor(Math.random() * max) + min;
     // console.log(randomNum);
 
