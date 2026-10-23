@@ -1,15 +1,75 @@
+@font-face {
+    font-family: 'DBsiamsquare';
+    src: url(DBSiamSquareExtraBold.otf);
+}
 body{
 
     height: 100vh;
     padding: 0;
     margin: 0;
     font-family: Verdana;
-    background: repeating-linear-gradient(180deg, #a70a0a , #a0203e);
+    background-color: rgb(235, 59, 46);
+    /* background: repeating-linear-gradient(180deg, #a70a0a , #a0203e); */
     overflow: hidden;
     
 
 }
 
+#gamecover{
+
+    z-index: 4;
+    width: 385px;
+    position:absolute;
+    /* border: rgb(64, 0, 255) 5px dashed; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    flex-direction: column;
+
+}
+#playtext{
+
+    font-family: "DBsiamsquare",sans-serif;
+    margin-top: 40px;
+    font-size: 36px;
+    color: whitesmoke;
+}
+
+#coverpic{
+
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    height: 550px;
+    /* margin-top: 40px;
+    margin-left: 40px; */
+    background-image: url("img/Cover.png");
+    background-position: top;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
+    /* border: rgb(0, 204, 255) 5px dashed; */
+
+    
+    
+
+}
+
+#playbutton{
+
+    z-index: 4;
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    /* color: aliceblue; */
+    background-color: rgba(255, 255, 255, 0);
+    /* margin-top: 210px; */
+    /* border: rgb(0, 204, 255) 5px dashed; */
+    
+    
+}
 
 #lockercontainer{
 
@@ -23,9 +83,7 @@ body{
     width: auto;
     height: auto;
     
-    
-    
-    
+      
 }
 
 #cardcontainer{
@@ -39,7 +97,7 @@ body{
 #card1{
 
     
-    z-index: 1;
+    z-index: 5;
     width: 80%;
     height: 500px;
     background-image: url("img/card01.png");
@@ -66,11 +124,51 @@ body{
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: 356px;
-    
-    
-    
+     
     
 }
+
+#returndiv{
+    z-index: 1;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+
+}
+
+#returnbutton{
+    
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #resultcontainer{ 
     display: flex;
     justify-content: center;
@@ -588,6 +686,7 @@ body{
 }
 
 #siemsicontainer{
+
     padding-top: 200px;
     z-index: 2;
     width: 210px;

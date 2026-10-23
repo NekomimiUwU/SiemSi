@@ -32,17 +32,25 @@ const result28 = document.getElementById("result28")
 const result29 = document.getElementById("result29")
 const result30 = document.getElementById("result30")
 
+const gamecover = document.getElementById("gamecover")
+
 const stick1 = document.getElementById("stick1")
 
 const backdrop = document.getElementById("backdrop")
 
 const card1 = document.getElementById("card1")
 
+const locker = document.getElementById("lockercontainer")
+
 card.addEventListener('mousedown' , mouseDown)
 
 window.onload = function(){
-    
+
+    locker.style.visibility = "hidden"
     stick1.style.visibility = "hidden"
+    card.style.visibility = "hidden"
+
+
 
     result.style.visibility = "hidden"
     result2.style.visibility = "hidden"
@@ -106,6 +114,38 @@ function mouseUp(e){
     document.removeEventListener("mousemove" , mouseMove)
 }
 
+const startbutton = document.getElementById("playbutton");
+
+startbutton.addEventListener("click", toggleMenuOn);
+
+function toggleMenuOn() {
+
+    locker.style.visibility = "visible"
+    card.style.visibility = "visible"
+    gamecover.style.visibility = "hidden"
+
+    console.log("button clicked")
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Mobile Version below
 
@@ -149,7 +189,7 @@ card.addEventListener("touchstart", function(e){
 
 
     holdTimer = setTimeout(() => {
-        console.log("Held for 3 second!");
+        console.log("Held for 2 second!");
         
         randomNum = Math.floor(Math.random() * max) + min;
         console.log(randomNum);
@@ -160,13 +200,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 1){ //ออกใบที่ 1
 
             stopMoving();
-
             stick1.style.visibility = "visible"
             stick1ani.classList.add('animatepopup');
             const card1 = document.querySelector('#card1');
 
             stick1ani.addEventListener("animationend", () => {               
-                // backdrop.style.visibility = "visible"
+                backdrop.style.visibility = "visible"
                 card1.style.visibility = "visible";
                 card1.classList.add('animatecardup');
                 
@@ -177,6 +216,25 @@ card.addEventListener("touchstart", function(e){
                     card1.classList.add('animatecardmove');    
                 }) 
             }, {once:true});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
 
@@ -205,7 +263,7 @@ card.addEventListener("touchstart", function(e){
 
 
 
-    }, 3000);
+    }, 2000);
 
     const touch = e.touches[0];
     const rect = card.getBoundingClientRect();
@@ -232,7 +290,7 @@ function stopMoving() {
 
 
 
-card.addEventListener("touchmove", function (e) {
+card.addEventListener("touchmove", function (e) { // สำหรับขยับ Div ที่รองรับ
     e.preventDefault();
 
     const touch = e.touches[0];
@@ -240,7 +298,7 @@ card.addEventListener("touchmove", function (e) {
         card.style.left = (touch.clientX - offsetX) + "px";
         card.style.top  = (touch.clientY - offsetY) + "px";
         // console.log("Moving...");
-    // สำหรับขยับ Div ที่รองรับ
+    
 });
     
     
