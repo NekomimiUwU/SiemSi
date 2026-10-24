@@ -32,15 +32,19 @@ const result28 = document.getElementById("result28")
 const result29 = document.getElementById("result29")
 const result30 = document.getElementById("result30")
 
+const cardcontainer =document.getElementById("cardcontainer")
 const gamecover = document.getElementById("gamecover")
-
 const stick1 = document.getElementById("stick1")
-
 const backdrop = document.getElementById("backdrop")
+const locker = document.getElementById("lockercontainer")
+const returngroup = document.getElementById("returndiv")
+
 
 const card1 = document.getElementById("card1")
 
-const locker = document.getElementById("lockercontainer")
+
+
+
 
 card.addEventListener('mousedown' , mouseDown)
 
@@ -49,6 +53,8 @@ window.onload = function(){
     locker.style.visibility = "hidden"
     stick1.style.visibility = "hidden"
     card.style.visibility = "hidden"
+    returngroup.style.visibility = "hidden"
+    // gamecover.style.visibility ="hidden"
 
 
 
@@ -130,7 +136,16 @@ function toggleMenuOn() {
     
 }
 
+const returnbutton = document.getElementById("returnbutton");
 
+returnbutton.addEventListener("click", toggleReturnMenu);
+
+function toggleReturnMenu(){
+
+    location.reload(); //สามารถต่อฟังชั่นกลับสู่หน้าหลักได้ตรงนี้
+
+
+}
 
 
 
@@ -211,9 +226,24 @@ card.addEventListener("touchstart", function(e){
                 
                 card1.addEventListener("animationend", () => {
                     
-                    console.log("animationended")
+                    // console.log("animationended")
                     
-                    card1.classList.add('animatecardmove');    
+                    card1.classList.add('animatecardmove');
+                    
+                    card1.addEventListener ("animationend", () => {
+                        
+                        holdTimer = setTimeout(() => {
+
+                            console.log("แสดงผลการ์ดจบแล้ว")
+                            stick1.style.visibility ="hidden"
+                            locker.style.visibility = "hidden"
+                            card.style.visibility = "hidden"
+                            returngroup.style.visibility = "visible"
+                            card1.style.visibility = "hidden";
+
+                        }, 5000);
+     
+                    })
                 }) 
             }, {once:true});
 
