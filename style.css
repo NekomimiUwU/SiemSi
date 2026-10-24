@@ -88,6 +88,7 @@ body{
 
 #cardcontainer{
 
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +99,7 @@ body{
 
     
     z-index: 5;
-    width: 80%;
+    width: 99%;
     height: 500px;
     background-image: url("img/card1.png");
     background-position: center;
@@ -106,9 +107,7 @@ body{
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    margin-right: 220px;
-    margin-bottom: 590px;
-
+    top: 100px;
 
 }
 
@@ -153,7 +152,7 @@ body{
     background-image: url("img/Thankyou.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 100%;
     width: 100%;
     height: 75%;
     /* border: rgb(17, 254, 222) 5px dashed; */
@@ -190,7 +189,8 @@ body{
 #returntext{
 
     z-index: 4;
-    bottom: 180px;
+    left: 100px;
+    bottom: 120px;
     position: relative;
     height: 30px;
     background-color: rgba(0, 0, 0, 0);
@@ -200,6 +200,15 @@ body{
     color: whitesmoke;
     /* border: rgb(0, 204, 255) 4px dashed; */
 
+}
+
+#continuebutton{
+    z-index: 7;
+    position: absolute;
+    width: 100%;
+    height: 95vh;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(5, 130, 239, 0);
 }
 
 
@@ -258,6 +267,9 @@ body{
 .animatecardup{
     animation: cardup 1s ease-out forwards;  
 }
+.dissolve{
+    animation: dissolve 1.5s ease-out forwards;
+}
 
 .animatecardmove{
     animation: cardmove 1.5s ease-out forwards;  
@@ -288,6 +300,17 @@ body{
         
     }
 }
+
+@keyframes dissolve{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+        
+    }
+}
+
 @keyframes cardmove{
     from{
         transform: translate(0px, 0px);

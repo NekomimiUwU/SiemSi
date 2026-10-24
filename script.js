@@ -37,6 +37,8 @@ const gamecover = document.getElementById("gamecover")
 const backdrop = document.getElementById("backdrop")
 const locker = document.getElementById("lockercontainer")
 const returngroup = document.getElementById("returndiv")
+const continuebutton = document.getElementById("continuebutton")
+
 
 const stick1 = document.getElementById("stick1")
 const stick2 = document.getElementById("stick2")
@@ -55,7 +57,15 @@ window.onload = function(){
     locker.style.visibility = "hidden"
     returngroup.style.visibility = "hidden"
     // gamecover.style.visibility ="hidden"
-    
+    continuebutton.style.visibility = "hidden"
+
+
+
+
+
+
+
+
     card.style.visibility = "hidden"
 
     card1.style.visibility = "hidden"
@@ -143,26 +153,31 @@ const startbutton = document.getElementById("playbutton");
 startbutton.addEventListener("click", toggleMenuOn);
 
 function toggleMenuOn() {
-
     locker.style.visibility = "visible"
     card.style.visibility = "visible"
     gamecover.style.visibility = "hidden"
-
-    console.log("button clicked")
-
-    
-    
+    console.log("button clicked") 
 }
 
 const returnbutton = document.getElementById("returnbutton");
-
 returnbutton.addEventListener("click", toggleReturnMenu);
-
 function toggleReturnMenu(){
-
     location.reload(); //สามารถต่อฟังชั่นกลับสู่หน้าหลักได้ตรงนี้
+}
 
+continuebutton.addEventListener("click", togglecontinuebutton)
+function togglecontinuebutton(){
+    console.log("ไปหน้าขอบคุณ")
+        console.log("แสดงผลการ์ดจบแล้ว")
 
+        const returngroup = document.querySelector('#returndiv');
+        returngroup.classList.add('dissolve');
+
+            stick1.style.visibility ="hidden"
+            locker.style.visibility = "hidden"
+            card.style.visibility = "hidden"
+            returngroup.style.visibility = "visible"
+            card1.style.visibility = "hidden";
 }
 
 
@@ -190,7 +205,7 @@ let offsetY = 0;
 const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
-const min = 2;
+const min = 1;
 const max = 1;
 let randomNum;
 
@@ -241,26 +256,26 @@ card.addEventListener("touchstart", function(e){
             stick1ani.addEventListener("animationend", () => {               
                 backdrop.style.visibility = "visible"
                 card1.style.visibility = "visible";
-                card1.classList.add('animatecardup');
+                card1.classList.add('dissolve');
                 
                 card1.addEventListener("animationend", () => {
                     
-                    // console.log("animationended")
+                    continuebutton.style.visibility = "visible"
                     
-                    card1.classList.add('animatecardmove');
+                    // card1.classList.add('animatecardmove');
                     
                     card1.addEventListener ("animationend", () => {
                         
-                        holdTimer = setTimeout(() => {
+                        // holdTimer = setTimeout(() => {
 
-                            console.log("แสดงผลการ์ดจบแล้ว")
-                            stick1.style.visibility ="hidden"
-                            locker.style.visibility = "hidden"
-                            card.style.visibility = "hidden"
-                            returngroup.style.visibility = "visible"
-                            card1.style.visibility = "hidden";
+                        //     console.log("แสดงผลการ์ดจบแล้ว")
+                        //     stick1.style.visibility ="hidden"
+                        //     locker.style.visibility = "hidden"
+                        //     card.style.visibility = "hidden"
+                        //     returngroup.style.visibility = "visible"
+                        //     card1.style.visibility = "hidden";
 
-                        }, 3000);
+                        // }, 3000);
      
                     })
                 }) 
@@ -310,7 +325,7 @@ card.addEventListener("touchstart", function(e){
 
 
 
-    }, 2000);
+    }, 1000);
 
     const touch = e.touches[0];
     const rect = card.getBoundingClientRect();
