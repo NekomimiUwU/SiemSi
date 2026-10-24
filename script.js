@@ -34,14 +34,15 @@ const result30 = document.getElementById("result30")
 
 const cardcontainer =document.getElementById("cardcontainer")
 const gamecover = document.getElementById("gamecover")
-const stick1 = document.getElementById("stick1")
 const backdrop = document.getElementById("backdrop")
 const locker = document.getElementById("lockercontainer")
 const returngroup = document.getElementById("returndiv")
 
+const stick1 = document.getElementById("stick1")
+const stick2 = document.getElementById("stick2")
 
 const card1 = document.getElementById("card1")
-
+const card2 = document.getElementById("card2")
 
 
 
@@ -50,11 +51,28 @@ card.addEventListener('mousedown' , mouseDown)
 
 window.onload = function(){
 
+
     locker.style.visibility = "hidden"
-    stick1.style.visibility = "hidden"
-    card.style.visibility = "hidden"
     returngroup.style.visibility = "hidden"
     // gamecover.style.visibility ="hidden"
+    
+    card.style.visibility = "hidden"
+
+    card1.style.visibility = "hidden"
+    card2.style.visibility = "hidden"
+
+    stick1.style.visibility = "hidden"
+    stick2.style.visibility = "hidden"
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -91,7 +109,7 @@ window.onload = function(){
 
     backdrop.style.visibility = "hidden";
     
-    card1.style.visibility = "hidden";
+    
 
 }
 
@@ -172,7 +190,7 @@ let offsetY = 0;
 const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
-const min = 1;
+const min = 2;
 const max = 1;
 let randomNum;
 
@@ -210,6 +228,7 @@ card.addEventListener("touchstart", function(e){
         console.log(randomNum);
 
         const stick1ani = document.querySelector('#stick1');
+        const stick2ani = document.querySelector('#stick2');
 
 
         if (randomNum == 1){ //ออกใบที่ 1
@@ -241,55 +260,53 @@ card.addEventListener("touchstart", function(e){
                             returngroup.style.visibility = "visible"
                             card1.style.visibility = "hidden";
 
-                        }, 5000);
+                        }, 3000);
      
                     })
                 }) 
             }, {once:true});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
 
         if (randomNum == 2){ //ออกใบที่ 2
 
             stopMoving();
+            stick2.style.visibility = "visible"
+            stick2ani.classList.add('animatepopup');
+            const card2 = document.querySelector('#card2');
 
-            stick1.style.visibility = "visible"
-            stick1ani.classList.add('animatepopup');
-            const card1 = document.querySelector('#card1');
-
-            stick1ani.addEventListener("animationend", () => {               
-                // backdrop.style.visibility = "visible"
-                card1.style.visibility = "visible";
-                card1.classList.add('animatecardup');
+            stick2ani.addEventListener("animationend", () => {               
+                backdrop.style.visibility = "visible"
+                card2.style.visibility = "visible";
+                card2.classList.add('animatecardup');
                 
-                card1.addEventListener("animationend", () => {
+                card2.addEventListener("animationend", () => {
                     
-                    console.log("animationended")
+                    // console.log("animationended")
                     
-                    card1.classList.add('animatecardmove');    
+                    card2.classList.add('animatecard2move');
+                    
+                    card2.addEventListener ("animationend", () => {
+                        
+                        holdTimer = setTimeout(() => {
+
+                            console.log("แสดงผลการ์ดจบแล้ว")
+                            stick2.style.visibility ="hidden"
+                            locker.style.visibility = "hidden"
+                            card.style.visibility = "hidden"
+                            returngroup.style.visibility = "visible"
+                            card2.style.visibility = "hidden";
+
+                        }, 3000);
+     
+                    })
                 }) 
             }, {once:true});
 
         }
+
+        
+
 
 
 
@@ -348,358 +365,358 @@ card.addEventListener("touchend", function (e) {
     clearTimeout(holdTimer);
     stopCounting();
     
-    const aniresult2 = document.querySelector('#result2');
-    const aniresult3 = document.querySelector('#result3');
-    const aniresult4 = document.querySelector('#result4');
-    const aniresult5 = document.querySelector('#result5');
-    const aniresult6 = document.querySelector('#result6');
-    const aniresult7 = document.querySelector('#result7');
-    const aniresult8 = document.querySelector('#result8');
-    const aniresult9 = document.querySelector('#result9');
-    const aniresult10 = document.querySelector('#result10');
-    const aniresult11 = document.querySelector('#result11');
-    const aniresult12 = document.querySelector('#result12');
-    const aniresult13 = document.querySelector('#result13');
-    const aniresult14 = document.querySelector('#result14');
-    const aniresult15 = document.querySelector('#result15');
-    const aniresult16 = document.querySelector('#result16');
-    const aniresult17 = document.querySelector('#result17');
-    const aniresult18 = document.querySelector('#result18');
-    const aniresult19 = document.querySelector('#result19');
-    const aniresult20 = document.querySelector('#result20');
-    const aniresult21 = document.querySelector('#result21');
-    const aniresult22 = document.querySelector('#result22');
-    const aniresult23 = document.querySelector('#result23');
-    const aniresult24 = document.querySelector('#result24');
-    const aniresult25 = document.querySelector('#result25');
-    const aniresult26 = document.querySelector('#result26');
-    const aniresult27 = document.querySelector('#result27');
-    const aniresult28 = document.querySelector('#result28');
-    const aniresult29 = document.querySelector('#result29');
-    const aniresult30 = document.querySelector('#result30');
+    // const aniresult2 = document.querySelector('#result2');
+    // const aniresult3 = document.querySelector('#result3');
+    // const aniresult4 = document.querySelector('#result4');
+    // const aniresult5 = document.querySelector('#result5');
+    // const aniresult6 = document.querySelector('#result6');
+    // const aniresult7 = document.querySelector('#result7');
+    // const aniresult8 = document.querySelector('#result8');
+    // const aniresult9 = document.querySelector('#result9');
+    // const aniresult10 = document.querySelector('#result10');
+    // const aniresult11 = document.querySelector('#result11');
+    // const aniresult12 = document.querySelector('#result12');
+    // const aniresult13 = document.querySelector('#result13');
+    // const aniresult14 = document.querySelector('#result14');
+    // const aniresult15 = document.querySelector('#result15');
+    // const aniresult16 = document.querySelector('#result16');
+    // const aniresult17 = document.querySelector('#result17');
+    // const aniresult18 = document.querySelector('#result18');
+    // const aniresult19 = document.querySelector('#result19');
+    // const aniresult20 = document.querySelector('#result20');
+    // const aniresult21 = document.querySelector('#result21');
+    // const aniresult22 = document.querySelector('#result22');
+    // const aniresult23 = document.querySelector('#result23');
+    // const aniresult24 = document.querySelector('#result24');
+    // const aniresult25 = document.querySelector('#result25');
+    // const aniresult26 = document.querySelector('#result26');
+    // const aniresult27 = document.querySelector('#result27');
+    // const aniresult28 = document.querySelector('#result28');
+    // const aniresult29 = document.querySelector('#result29');
+    // const aniresult30 = document.querySelector('#result30');
     
     
 
     
-    if (randomNum == 2){
-        result2.style.visibility = "visible";
-        aniresult2.classList.add('animate');
+    // if (randomNum == 2){
+    //     result2.style.visibility = "visible";
+    //     aniresult2.classList.add('animate');
 
-        aniresult2.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult2.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 3){
-        result3.style.visibility = "visible";
-        aniresult3.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 3){
+    //     result3.style.visibility = "visible";
+    //     aniresult3.classList.add('animate');
 
-        aniresult3.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult3.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 4){
-        result4.style.visibility = "visible";
-        aniresult4.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 4){
+    //     result4.style.visibility = "visible";
+    //     aniresult4.classList.add('animate');
 
-        aniresult4.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult4.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 5){
-        result5.style.visibility = "visible";
-        aniresult5.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 5){
+    //     result5.style.visibility = "visible";
+    //     aniresult5.classList.add('animate');
 
-        aniresult5.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult5.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 6){
-        result6.style.visibility = "visible";
-        aniresult6.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 6){
+    //     result6.style.visibility = "visible";
+    //     aniresult6.classList.add('animate');
 
-        aniresult6.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult6.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 7){
-        result7.style.visibility = "visible";
-        aniresult7.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 7){
+    //     result7.style.visibility = "visible";
+    //     aniresult7.classList.add('animate');
 
-        aniresult7.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult7.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 8){
-        result8.style.visibility = "visible";
-        aniresult8.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 8){
+    //     result8.style.visibility = "visible";
+    //     aniresult8.classList.add('animate');
 
-        aniresult8.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult8.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 9){
-        result9.style.visibility = "visible";
-        aniresult9.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 9){
+    //     result9.style.visibility = "visible";
+    //     aniresult9.classList.add('animate');
 
-        aniresult9.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult9.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 10){
-        result10.style.visibility = "visible";
-        aniresult10.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 10){
+    //     result10.style.visibility = "visible";
+    //     aniresult10.classList.add('animate');
 
-        aniresult10.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult10.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 11){
-        result11.style.visibility = "visible";
-        aniresult11.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 11){
+    //     result11.style.visibility = "visible";
+    //     aniresult11.classList.add('animate');
 
-        aniresult11.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult11.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 12){
-        result12.style.visibility = "visible";
-        aniresult12.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 12){
+    //     result12.style.visibility = "visible";
+    //     aniresult12.classList.add('animate');
 
-        aniresult12.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult12.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 13){
-        result12.style.visibility = "visible";
-        aniresult13.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 13){
+    //     result12.style.visibility = "visible";
+    //     aniresult13.classList.add('animate');
 
-        aniresult13.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult13.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 14){
-        result14.style.visibility = "visible";
-        aniresult14.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 14){
+    //     result14.style.visibility = "visible";
+    //     aniresult14.classList.add('animate');
 
-        aniresult14.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult14.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 15){
-        result15.style.visibility = "visible";
-        aniresult15.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 15){
+    //     result15.style.visibility = "visible";
+    //     aniresult15.classList.add('animate');
 
-        aniresult15.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult15.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 16){
-        result16.style.visibility = "visible";
-        aniresult16.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 16){
+    //     result16.style.visibility = "visible";
+    //     aniresult16.classList.add('animate');
 
-        aniresult16.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult16.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 17){
-        result17.style.visibility = "visible";
-        aniresult17.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 17){
+    //     result17.style.visibility = "visible";
+    //     aniresult17.classList.add('animate');
 
-        aniresult17.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult17.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 18){
-        result18.style.visibility = "visible";
-        aniresult18.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 18){
+    //     result18.style.visibility = "visible";
+    //     aniresult18.classList.add('animate');
 
-        aniresult18.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult18.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 19){
-        result19.style.visibility = "visible";
-        aniresult19.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 19){
+    //     result19.style.visibility = "visible";
+    //     aniresult19.classList.add('animate');
 
-        aniresult19.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult19.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 20){
-        result20.style.visibility = "visible";
-        aniresult20.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 20){
+    //     result20.style.visibility = "visible";
+    //     aniresult20.classList.add('animate');
 
-        aniresult20.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult20.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 21){
-        result21.style.visibility = "visible";
-        aniresult21.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 21){
+    //     result21.style.visibility = "visible";
+    //     aniresult21.classList.add('animate');
 
-        aniresult21.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult21.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 22){
-        result22.style.visibility = "visible";
-        aniresult22.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 22){
+    //     result22.style.visibility = "visible";
+    //     aniresult22.classList.add('animate');
 
-        aniresult22.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult22.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 23){
-        result23.style.visibility = "visible";
-        aniresult23.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 23){
+    //     result23.style.visibility = "visible";
+    //     aniresult23.classList.add('animate');
 
-        aniresult23.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult23.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 24){
-        result24.style.visibility = "visible";
-        aniresult24.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 24){
+    //     result24.style.visibility = "visible";
+    //     aniresult24.classList.add('animate');
 
-        aniresult24.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult24.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 25){
-        result25.style.visibility = "visible";
-        aniresult25.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 25){
+    //     result25.style.visibility = "visible";
+    //     aniresult25.classList.add('animate');
 
-        aniresult25.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult25.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 26){
-        result26.style.visibility = "visible";
-        aniresult26.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 26){
+    //     result26.style.visibility = "visible";
+    //     aniresult26.classList.add('animate');
 
-        aniresult26.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult26.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 27){
-        result27.style.visibility = "visible";
-        aniresult27.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 27){
+    //     result27.style.visibility = "visible";
+    //     aniresult27.classList.add('animate');
 
-        aniresult27.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult27.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 28){
-        result28.style.visibility = "visible";
-        aniresult28.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 28){
+    //     result28.style.visibility = "visible";
+    //     aniresult28.classList.add('animate');
 
-        aniresult28.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult28.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 29){
-        result29.style.visibility = "visible";
-        aniresult29.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 29){
+    //     result29.style.visibility = "visible";
+    //     aniresult29.classList.add('animate');
 
-        aniresult29.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult29.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
-    if (randomNum == 30){
-        result30.style.visibility = "visible";
-        aniresult30.classList.add('animate');
+    //     }, {once:true});
+    // }
+    // if (randomNum == 30){
+    //     result30.style.visibility = "visible";
+    //     aniresult30.classList.add('animate');
 
-        aniresult30.addEventListener("animationend", () => {
-            console.log("animationended")
-            backdrop.style.visibility = "visible"
-            card1.classList.add('animateslidein');
+    //     aniresult30.addEventListener("animationend", () => {
+    //         console.log("animationended")
+    //         backdrop.style.visibility = "visible"
+    //         card1.classList.add('animateslidein');
             
-        }, {once:true});
-    }
+    //     }, {once:true});
+    // }
 
 });
 

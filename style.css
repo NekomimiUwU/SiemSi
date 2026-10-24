@@ -100,13 +100,31 @@ body{
     z-index: 5;
     width: 80%;
     height: 500px;
-    background-image: url("img/card01.png");
+    background-image: url("img/card1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
     margin-right: 220px;
+    margin-bottom: 590px;
+
+
+}
+
+#card2{
+
+    
+    z-index: 5;
+    width: 80%;
+    height: 500px;
+    background-image: url("img/card2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
+    margin-right: 111px;
     margin-bottom: 590px;
 
 
@@ -222,7 +240,7 @@ body{
     width: 80%;
     height: 600px;
     /* border: rgb(0, 204, 255) 5px dashed; */
-    background-image: url("img/stick01.png");
+    background-image: url("img/stick/stick01.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 512px;
@@ -243,6 +261,10 @@ body{
 
 .animatecardmove{
     animation: cardmove 1.5s ease-out forwards;  
+}
+
+.animatecard2move{
+    animation: cardmove2 1.5s ease-out forwards;  
 }
 
 @keyframes example{
@@ -274,21 +296,15 @@ body{
         transform: translate(110px, 290px);
     }
 }
-
-
-#result2{
-
-    z-index: 1;
-    position: absolute;
-    margin-top: 1400px;
-    width: 80%;
-    height: 600px;
-    /* border: rgb(255, 234, 0) 5px dashed; */
-    background-image: url("img/stick2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 512px;
+@keyframes cardmove2{
+    from{
+        transform: translate(0px, 0px);
+    }
+    to{
+        transform: translate(50px, 290px);
+    }
 }
+
 
 #result3{
 
@@ -732,7 +748,21 @@ body{
     width: 100%;
     height: 250px;
     /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick01.png");
+    background-image: url("img/stick/stick01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
+}
+
+#stick2{
+    padding-bottom: 250px;
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    /* border: rgb(55, 255, 0) 5px dashed; */
+    background-image: url("img/stick/2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25%;
