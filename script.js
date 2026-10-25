@@ -74,7 +74,10 @@ const card28 = document.getElementById("card28")
 const card29 = document.getElementById("card29")
 const card30 = document.getElementById("card30")
 
-const sound = new Audio("bell.mp3");
+const bellsound = new Audio("bell.mp3")
+const flippaper = new Audio("flippaper.mp3")
+const clicksound = new Audio("click.mp3")
+const siemsisound = new Audio("siemsi.mp3")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
 
@@ -190,9 +193,19 @@ function mouseUp(e){
 }
 
 function playbellsound(){
-    sound.volume = 0.4;
-    sound.currentTime = 0;
-    sound.play();
+    bellsound.volume = 0.2;
+    bellsound.currentTime = 0;
+    bellsound.play();
+}
+
+function playflippaper(){
+    flippaper.volume = 0.5;
+    flippaper.currentTime = 0;
+    flippaper.play();
+}
+
+function playsiemsisound(){
+    
 }
 
 
@@ -201,16 +214,28 @@ const startbutton = document.getElementById("playbutton");
 startbutton.addEventListener("click", toggleMenuOn);
 
 function toggleMenuOn() {
-    locker.style.visibility = "visible"
-    card.style.visibility = "visible"
-    gamecover.style.visibility = "hidden"
-    console.log("button clicked") 
+    clicksound.currentTime= 0;
+    clicksound.play();
+
+    holdTimer = setTimeout(() => {
+        locker.style.visibility = "visible"
+        card.style.visibility = "visible"
+        gamecover.style.visibility = "hidden"
+    }, 300);
+
+
+    // console.log("button clicked") 
 }
 
 const returnbutton = document.getElementById("returnbutton");
 returnbutton.addEventListener("click", toggleReturnMenu);
 function toggleReturnMenu(){
-    location.reload(); //สามารถต่อฟังชั่นกลับสู่หน้าหลักได้ตรงนี้
+    clicksound.currentTime= 0;
+    clicksound.play();
+    holdTimer = setTimeout(() => {
+        location.reload(); //สามารถต่อฟังชั่นกลับสู่หน้าหลักได้ตรงนี้
+    }, 500);
+    
 }
 
 continuebutton.addEventListener("click", togglecontinuebutton);
@@ -289,7 +314,6 @@ function togglecontinuebutton(){
             stick30.style.visibility = "hidden"
             
             
-
 }
 
 
@@ -327,6 +351,8 @@ let canMove = true;
 
 card.addEventListener("touchstart", function(e){
 
+    
+
     if (timer !== null) return; // Prevent duplicate timers
 
     seconds = 2;
@@ -334,6 +360,7 @@ card.addEventListener("touchstart", function(e){
 
     timer = setInterval(() => {
         seconds--;
+            
         console.log(seconds + " seconds"); 
                     if (seconds <= 0) {
                        
@@ -349,6 +376,7 @@ card.addEventListener("touchstart", function(e){
 
 
     holdTimer = setTimeout(() => {
+
         console.log("Held for 2 second!");
         
         randomNum = Math.floor(Math.random() * max) + min;
@@ -399,7 +427,8 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card1.style.visibility = "visible";
                     card1.classList.add('dissolve');
-                    
+                    playflippaper()
+
                     card1.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -427,6 +456,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card2.style.visibility = "visible";
                     card2.classList.add('dissolve');
+                    playflippaper()
                     
                     card2.addEventListener("animationend", () => {
                     
@@ -453,7 +483,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card3.style.visibility = "visible";
                     card3.classList.add('dissolve');
-                    
+                    playflippaper()
                     card3.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -479,7 +509,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card4.style.visibility = "visible";
                     card4.classList.add('dissolve');
-                    
+                    playflippaper()
                     card4.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -505,7 +535,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card5.style.visibility = "visible";
                     card5.classList.add('dissolve');
-                    
+                    playflippaper()
                     card5.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -530,7 +560,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card6.style.visibility = "visible";
                     card6.classList.add('dissolve');
-                    
+                    playflippaper()
                     card6.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -556,7 +586,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card7.style.visibility = "visible";
                     card7.classList.add('dissolve');
-                    
+                    playflippaper()
                     card7.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -570,7 +600,7 @@ card.addEventListener("touchstart", function(e){
 
         }
 
-        if (randomNum == 8){ //ออกใบที่ 7
+        if (randomNum == 8){ //ออกใบที่ 8
 
             stopMoving();
             stick8.style.visibility = "visible"
@@ -582,7 +612,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card8.style.visibility = "visible";
                     card8.classList.add('dissolve');
-                    
+                    playflippaper()
                     card8.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -608,7 +638,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card9.style.visibility = "visible";
                     card9.classList.add('dissolve');
-                    
+                    playflippaper()
                     card9.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -634,7 +664,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card10.style.visibility = "visible";
                     card10.classList.add('dissolve');
-                    
+                    playflippaper()
                     card10.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -660,7 +690,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card11.style.visibility = "visible";
                     card11.classList.add('dissolve');
-                    
+                    playflippaper()
                     card11.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -686,7 +716,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card12.style.visibility = "visible";
                     card12.classList.add('dissolve');
-                    
+                    playflippaper()
                     card12.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -712,7 +742,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card13.style.visibility = "visible";
                     card13.classList.add('dissolve');
-                    
+                    playflippaper()
                     card13.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -738,7 +768,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card14.style.visibility = "visible";
                     card14.classList.add('dissolve');
-                    
+                    playflippaper()
                     card14.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -764,7 +794,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card15.style.visibility = "visible";
                     card15.classList.add('dissolve');
-                    
+                    playflippaper()
                     card15.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -790,7 +820,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card16.style.visibility = "visible";
                     card16.classList.add('dissolve');
-                    
+                    playflippaper()
                     card16.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -816,7 +846,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card17.style.visibility = "visible";
                     card17.classList.add('dissolve');
-                    
+                    playflippaper()
                     card17.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -842,7 +872,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card18.style.visibility = "visible";
                     card18.classList.add('dissolve');
-                    
+                    playflippaper()
                     card18.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -868,7 +898,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card19.style.visibility = "visible";
                     card19.classList.add('dissolve');
-                    
+                    playflippaper()
                     card19.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -894,7 +924,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card20.style.visibility = "visible";
                     card20.classList.add('dissolve');
-                    
+                    playflippaper()
                     card20.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -920,7 +950,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card21.style.visibility = "visible";
                     card21.classList.add('dissolve');
-                    
+                    playflippaper()
                     card21.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -947,7 +977,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card22.style.visibility = "visible";
                     card22.classList.add('dissolve');
-                    
+                    playflippaper()
                     card22.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -973,7 +1003,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card23.style.visibility = "visible";
                     card23.classList.add('dissolve');
-                    
+                    playflippaper()
                     card23.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -999,7 +1029,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card24.style.visibility = "visible";
                     card24.classList.add('dissolve');
-                    
+                    playflippaper()
                     card24.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1025,7 +1055,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card25.style.visibility = "visible";
                     card25.classList.add('dissolve');
-                    
+                    playflippaper()
                     card25.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1050,7 +1080,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card26.style.visibility = "visible";
                     card26.classList.add('dissolve');
-                    
+                    playflippaper()
                     card26.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1064,7 +1094,7 @@ card.addEventListener("touchstart", function(e){
 
         }
 
-        if (randomNum == 27){ //ออกใบที่ 7
+        if (randomNum == 27){ //ออกใบที่ 27
 
             stopMoving();
             stick27.style.visibility = "visible"
@@ -1076,7 +1106,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card27.style.visibility = "visible";
                     card27.classList.add('dissolve');
-                    
+                    playflippaper()
                     card27.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1090,7 +1120,7 @@ card.addEventListener("touchstart", function(e){
 
         }
 
-        if (randomNum == 28){ //ออกใบที่ 7
+        if (randomNum == 28){ //ออกใบที่ 28
 
             stopMoving();
             stick28.style.visibility = "visible"
@@ -1102,7 +1132,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card28.style.visibility = "visible";
                     card28.classList.add('dissolve');
-                    
+                    playflippaper()
                     card28.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1128,7 +1158,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card29.style.visibility = "visible";
                     card29.classList.add('dissolve');
-                    
+                    playflippaper()
                     card29.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1154,7 +1184,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card30.style.visibility = "visible";
                     card30.classList.add('dissolve');
-                    
+                    playflippaper()
                     card30.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -1196,13 +1226,19 @@ function stopMoving() {
 
 card.addEventListener("touchmove", function (e) { // สำหรับขยับ Div ที่รองรับ
     e.preventDefault();
+    siemsisound.volume = 1;
+        
+        siemsisound.play().catch(console.error);
 
     const touch = e.touches[0];
     if (!canMove) return;
         card.style.left = (touch.clientX - offsetX) + "px";
         card.style.top  = (touch.clientY - offsetY) + "px";
-        // console.log("Moving...");
-    
+        console.log("Moving...");
+        siemsisound.volume = 1;
+        
+        siemsisound.play().catch(console.error);
+        
 });
     
     
