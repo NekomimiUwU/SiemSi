@@ -147,14 +147,14 @@ body{
 
 #returnpic{
     position: relative;
-    bottom: 100px;
+    top: 50px;
     z-index: 5;
     background-image: url("img/Thankyou.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    height: 75%;
+    height: 100%;
     /* border: rgb(17, 254, 222) 5px dashed; */
 }
 
