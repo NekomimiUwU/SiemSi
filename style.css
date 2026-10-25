@@ -147,7 +147,7 @@ body{
 
 #returnpic{
     position: relative;
-    bottom: 200px;
+    bottom: 100px;
     z-index: 5;
     background-image: url("img/Thankyou.png");
     background-position: center;
@@ -190,7 +190,7 @@ body{
 
     z-index: 4;
     left: 100px;
-    bottom: 120px;
+    bottom: 80px;
     position: relative;
     height: 30px;
     background-color: rgba(0, 0, 0, 0);
