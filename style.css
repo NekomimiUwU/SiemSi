@@ -820,7 +820,7 @@ body{
 
 
 .animatepopup{
-    animation: popup 2s ease-out forwards;  
+    animation: popup 1s ease-out forwards;  
 }
 
 @keyframes popup{
@@ -830,13 +830,13 @@ body{
         
     }
     50%{
-        transform: translateY(-400px);
+        transform: translateY(-150px);
         
         
     }
     100%{
-        transform: translateY(0px);
-        transform: scale(110%);
+        transform: translateY(-50px);
+        
     }
 }
 

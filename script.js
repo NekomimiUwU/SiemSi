@@ -165,7 +165,7 @@ function toggleReturnMenu(){
     location.reload(); //สามารถต่อฟังชั่นกลับสู่หน้าหลักได้ตรงนี้
 }
 
-continuebutton.addEventListener("click", togglecontinuebutton)
+continuebutton.addEventListener("click", togglecontinuebutton);
 function togglecontinuebutton(){
     console.log("ไปหน้าขอบคุณ")
         console.log("แสดงผลการ์ดจบแล้ว")
@@ -178,6 +178,7 @@ function togglecontinuebutton(){
             card.style.visibility = "hidden"
             returngroup.style.visibility = "visible"
             card1.style.visibility = "hidden";
+            continuebutton.style.visibility = "hidden";
 }
 
 
