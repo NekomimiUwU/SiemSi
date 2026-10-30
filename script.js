@@ -21,27 +21,7 @@ const stick6 = document.getElementById("stick6")
 const stick7 = document.getElementById("stick7")
 const stick8 = document.getElementById("stick8")
 const stick9 = document.getElementById("stick9")
-const stick10 = document.getElementById("stick10")
-const stick11 = document.getElementById("stick11")
-const stick12 = document.getElementById("stick12")
-const stick13 = document.getElementById("stick13")
-const stick14 = document.getElementById("stick14")
-const stick15 = document.getElementById("stick15")
-const stick16 = document.getElementById("stick16")
-const stick17 = document.getElementById("stick17")
-const stick18 = document.getElementById("stick18")
-const stick19 = document.getElementById("stick19")
-const stick20 = document.getElementById("stick20")
-const stick21 = document.getElementById("stick21")
-const stick22 = document.getElementById("stick22")
-const stick23 = document.getElementById("stick23")
-const stick24 = document.getElementById("stick24")
-const stick25 = document.getElementById("stick25")
-const stick26 = document.getElementById("stick26")
-const stick27 = document.getElementById("stick27")
-const stick28 = document.getElementById("stick28")
-const stick29 = document.getElementById("stick29")
-const stick30 = document.getElementById("stick30")
+
 
 const card1 = document.getElementById("card1")
 const card2 = document.getElementById("card2")
@@ -52,27 +32,7 @@ const card6 = document.getElementById("card6")
 const card7 = document.getElementById("card7")
 const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
-const card10 = document.getElementById("card10")
-const card11 = document.getElementById("card11")
-const card12 = document.getElementById("card12")
-const card13 = document.getElementById("card13")
-const card14 = document.getElementById("card14")
-const card15 = document.getElementById("card15")
-const card16 = document.getElementById("card16")
-const card17 = document.getElementById("card17")
-const card18 = document.getElementById("card18")
-const card19 = document.getElementById("card19")
-const card20 = document.getElementById("card20")
-const card21 = document.getElementById("card21")
-const card22 = document.getElementById("card22")
-const card23 = document.getElementById("card23")
-const card24 = document.getElementById("card24")
-const card25 = document.getElementById("card25")
-const card26 = document.getElementById("card26")
-const card27 = document.getElementById("card27")
-const card28 = document.getElementById("card28")
-const card29 = document.getElementById("card29")
-const card30 = document.getElementById("card30")
+
 
 const bellsound = new Audio("bell.mp3")
 const flippaper = new Audio("flippaper.mp3")
@@ -81,7 +41,7 @@ const siemsisound = new Audio("siemsi.mp3")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
 
-    playbellsound();
+    
 
     locker.style.visibility = "hidden"
     returngroup.style.visibility = "hidden"
@@ -106,27 +66,7 @@ window.onload = function(){ //โหลดเข้าหน้าแรก
     card7.style.visibility = "hidden"
     card8.style.visibility = "hidden"
     card9.style.visibility = "hidden"
-    card10.style.visibility = "hidden"
-    card11.style.visibility = "hidden"
-    card12.style.visibility = "hidden"
-    card13.style.visibility = "hidden"
-    card14.style.visibility = "hidden"
-    card15.style.visibility = "hidden"
-    card16.style.visibility = "hidden"
-    card17.style.visibility = "hidden"
-    card18.style.visibility = "hidden"
-    card19.style.visibility = "hidden"
-    card20.style.visibility = "hidden"
-    card21.style.visibility = "hidden"
-    card22.style.visibility = "hidden"
-    card23.style.visibility = "hidden"
-    card24.style.visibility = "hidden"
-    card25.style.visibility = "hidden"
-    card26.style.visibility = "hidden"
-    card27.style.visibility = "hidden"
-    card28.style.visibility = "hidden"
-    card29.style.visibility = "hidden"
-    card30.style.visibility = "hidden"
+    
 
     stick1.style.visibility = "hidden"
     stick2.style.visibility = "hidden"
@@ -137,27 +77,6 @@ window.onload = function(){ //โหลดเข้าหน้าแรก
     stick7.style.visibility = "hidden"
     stick8.style.visibility = "hidden"
     stick9.style.visibility = "hidden"
-    stick10.style.visibility = "hidden"
-    stick11.style.visibility = "hidden"
-    stick12.style.visibility = "hidden"
-    stick13.style.visibility = "hidden"
-    stick14.style.visibility = "hidden"
-    stick15.style.visibility = "hidden"
-    stick16.style.visibility = "hidden"
-    stick17.style.visibility = "hidden"
-    stick18.style.visibility = "hidden"
-    stick19.style.visibility = "hidden"
-    stick20.style.visibility = "hidden"
-    stick21.style.visibility = "hidden"
-    stick22.style.visibility = "hidden"
-    stick23.style.visibility = "hidden"
-    stick24.style.visibility = "hidden"
-    stick25.style.visibility = "hidden"
-    stick26.style.visibility = "hidden"
-    stick27.style.visibility = "hidden"
-    stick28.style.visibility = "hidden"
-    stick29.style.visibility = "hidden"
-    stick30.style.visibility = "hidden"
 
     backdrop.style.visibility = "hidden";
     
@@ -193,15 +112,19 @@ function mouseUp(e){
 }
 
 function playbellsound(){
-    bellsound.volume = 0.2;
-    bellsound.currentTime = 0;
-    bellsound.play();
+
+        bellsound.volume = 1;
+        bellsound.currentTime= 0;
+        bellsound.play();
+
 }
 
 function playflippaper(){
-    flippaper.volume = 0.5;
-    flippaper.currentTime = 0;
+
+    flippaper.volume = 1;
+    
     flippaper.play();
+    
 }
 
 function playsiemsisound(){
@@ -260,27 +183,7 @@ function togglecontinuebutton(){
             card7.style.visibility = "hidden"
             card8.style.visibility = "hidden"
             card9.style.visibility = "hidden"
-            card10.style.visibility = "hidden"
-            card11.style.visibility = "hidden"
-            card12.style.visibility = "hidden"
-            card13.style.visibility = "hidden"
-            card14.style.visibility = "hidden"
-            card15.style.visibility = "hidden"
-            card16.style.visibility = "hidden"
-            card17.style.visibility = "hidden"
-            card18.style.visibility = "hidden"
-            card19.style.visibility = "hidden"
-            card20.style.visibility = "hidden"
-            card21.style.visibility = "hidden"
-            card22.style.visibility = "hidden"
-            card23.style.visibility = "hidden"
-            card24.style.visibility = "hidden"
-            card25.style.visibility = "hidden"
-            card26.style.visibility = "hidden"
-            card27.style.visibility = "hidden"
-            card28.style.visibility = "hidden"
-            card29.style.visibility = "hidden"
-            card30.style.visibility = "hidden"
+            
 
             stick1.style.visibility = "hidden"
             stick2.style.visibility = "hidden"
@@ -291,27 +194,7 @@ function togglecontinuebutton(){
             stick7.style.visibility = "hidden"
             stick8.style.visibility = "hidden"
             stick9.style.visibility = "hidden"
-            stick10.style.visibility = "hidden"
-            stick11.style.visibility = "hidden"
-            stick12.style.visibility = "hidden"
-            stick13.style.visibility = "hidden"
-            stick14.style.visibility = "hidden"
-            stick15.style.visibility = "hidden"
-            stick16.style.visibility = "hidden"
-            stick17.style.visibility = "hidden"
-            stick18.style.visibility = "hidden"
-            stick19.style.visibility = "hidden"
-            stick20.style.visibility = "hidden"
-            stick21.style.visibility = "hidden"
-            stick22.style.visibility = "hidden"
-            stick23.style.visibility = "hidden"
-            stick24.style.visibility = "hidden"
-            stick25.style.visibility = "hidden"
-            stick26.style.visibility = "hidden"
-            stick27.style.visibility = "hidden"
-            stick28.style.visibility = "hidden"
-            stick29.style.visibility = "hidden"
-            stick30.style.visibility = "hidden"
+            
             
             
 }
@@ -342,7 +225,7 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 30;
+const max = 9;
 let randomNum;
 
 let seconds = 0;
@@ -391,27 +274,7 @@ card.addEventListener("touchstart", function(e){
         const stick7ani = document.querySelector('#stick7');
         const stick8ani = document.querySelector('#stick8');
         const stick9ani = document.querySelector('#stick9');
-        const stick10ani = document.querySelector('#stick10');
-        const stick11ani = document.querySelector('#stick11');
-        const stick12ani = document.querySelector('#stick12');
-        const stick13ani = document.querySelector('#stick13');
-        const stick14ani = document.querySelector('#stick14');
-        const stick15ani = document.querySelector('#stick15');
-        const stick16ani = document.querySelector('#stick16');
-        const stick17ani = document.querySelector('#stick17');
-        const stick18ani = document.querySelector('#stick18');
-        const stick19ani = document.querySelector('#stick19');
-        const stick20ani = document.querySelector('#stick20');
-        const stick21ani = document.querySelector('#stick21');
-        const stick22ani = document.querySelector('#stick22');
-        const stick23ani = document.querySelector('#stick23');
-        const stick24ani = document.querySelector('#stick24');
-        const stick25ani = document.querySelector('#stick25');
-        const stick26ani = document.querySelector('#stick26');
-        const stick27ani = document.querySelector('#stick27');
-        const stick28ani = document.querySelector('#stick28');
-        const stick29ani = document.querySelector('#stick29');
-        const stick30ani = document.querySelector('#stick30');
+        
 
 
         if (randomNum == 1){ //ออกใบที่ 1
@@ -652,551 +515,7 @@ card.addEventListener("touchstart", function(e){
 
         }
 
-        if (randomNum == 10){ //ออกใบที่ 10
-
-            stopMoving();
-            stick10.style.visibility = "visible"
-            stick10ani.classList.add('animatepopup');
-            const card10 = document.querySelector('#card10');
-
-            stick10ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card10.style.visibility = "visible";
-                    card10.classList.add('dissolve');
-                    playflippaper()
-                    card10.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card10.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 11){ //ออกใบที่ 11
-
-            stopMoving();
-            stick11.style.visibility = "visible"
-            stick11ani.classList.add('animatepopup');
-            const card11 = document.querySelector('#card11');
-
-            stick11ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card11.style.visibility = "visible";
-                    card11.classList.add('dissolve');
-                    playflippaper()
-                    card11.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card11.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 12){ //ออกใบที่ 12
-
-            stopMoving();
-            stick12.style.visibility = "visible"
-            stick12ani.classList.add('animatepopup');
-            const card12 = document.querySelector('#card12');
-
-            stick12ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card12.style.visibility = "visible";
-                    card12.classList.add('dissolve');
-                    playflippaper()
-                    card12.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card12.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 13){ //ออกใบที่ 13
-
-            stopMoving();
-            stick13.style.visibility = "visible"
-            stick13ani.classList.add('animatepopup');
-            const card13 = document.querySelector('#card13');
-
-            stick13ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card13.style.visibility = "visible";
-                    card13.classList.add('dissolve');
-                    playflippaper()
-                    card13.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card13.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 14){ //ออกใบที่ 14
-
-            stopMoving();
-            stick14.style.visibility = "visible"
-            stick14ani.classList.add('animatepopup');
-            const card14 = document.querySelector('#card14');
-
-            stick14ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card14.style.visibility = "visible";
-                    card14.classList.add('dissolve');
-                    playflippaper()
-                    card14.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card14.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 15){ //ออกใบที่ 15
-
-            stopMoving();
-            stick15.style.visibility = "visible"
-            stick15ani.classList.add('animatepopup');
-            const card15 = document.querySelector('#card15');
-
-            stick15ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card15.style.visibility = "visible";
-                    card15.classList.add('dissolve');
-                    playflippaper()
-                    card15.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card15.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 16){ //ออกใบที่ 16
-
-            stopMoving();
-            stick16.style.visibility = "visible"
-            stick16ani.classList.add('animatepopup');
-            const card16 = document.querySelector('#card16');
-
-            stick16ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card16.style.visibility = "visible";
-                    card16.classList.add('dissolve');
-                    playflippaper()
-                    card16.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card16.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 17){ //ออกใบที่ 17
-
-            stopMoving();
-            stick17.style.visibility = "visible"
-            stick17ani.classList.add('animatepopup');
-            const card17 = document.querySelector('#card17');
-
-            stick17ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card17.style.visibility = "visible";
-                    card17.classList.add('dissolve');
-                    playflippaper()
-                    card17.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card17.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 18){ //ออกใบที่ 18
-
-            stopMoving();
-            stick18.style.visibility = "visible"
-            stick18ani.classList.add('animatepopup');
-            const card18 = document.querySelector('#card18');
-
-            stick18ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card18.style.visibility = "visible";
-                    card18.classList.add('dissolve');
-                    playflippaper()
-                    card18.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card18.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 19){ //ออกใบที่ 19
-
-            stopMoving();
-            stick19.style.visibility = "visible"
-            stick19ani.classList.add('animatepopup');
-            const card19 = document.querySelector('#card19');
-
-            stick19ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card19.style.visibility = "visible";
-                    card19.classList.add('dissolve');
-                    playflippaper()
-                    card19.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card19.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 20){ //ออกใบที่ 20
-
-            stopMoving();
-            stick20.style.visibility = "visible"
-            stick20ani.classList.add('animatepopup');
-            const card20 = document.querySelector('#card20');
-
-            stick20ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card20.style.visibility = "visible";
-                    card20.classList.add('dissolve');
-                    playflippaper()
-                    card20.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card20.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 21){ //ออกใบที่ 21
-
-            stopMoving();
-            stick21.style.visibility = "visible"
-            stick21ani.classList.add('animatepopup');
-            const card21 = document.querySelector('#card21');
-
-            stick21ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card21.style.visibility = "visible";
-                    card21.classList.add('dissolve');
-                    playflippaper()
-                    card21.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card21.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 22){ //ออกใบที่ 22
-
-            stopMoving();
-            stick22.style.visibility = "visible"
-            stick22ani.classList.add('animatepopup');
-            const card22 = document.querySelector('#card22');
-
-            stick22ani.addEventListener("animationend", () => {
-                            
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card22.style.visibility = "visible";
-                    card22.classList.add('dissolve');
-                    playflippaper()
-                    card22.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card22.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 23){ //ออกใบที่ 3
-
-            stopMoving();
-            stick23.style.visibility = "visible"
-            stick23ani.classList.add('animatepopup');
-            const card23 = document.querySelector('#card23');
-
-            stick23ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card23.style.visibility = "visible";
-                    card23.classList.add('dissolve');
-                    playflippaper()
-                    card23.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card23.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000);
-            }, {once:true});
-
-        }
-
-        if (randomNum == 24){ //ออกใบที่ 24
-
-            stopMoving();
-            stick24.style.visibility = "visible"
-            stick24ani.classList.add('animatepopup');
-            const card24 = document.querySelector('#card24');
-
-            stick24ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card24.style.visibility = "visible";
-                    card24.classList.add('dissolve');
-                    playflippaper()
-                    card24.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card24.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000);
-            }, {once:true});
-
-        }
-
-        if (randomNum == 25){ //ออกใบที่ 25
-
-            stopMoving();
-            stick25.style.visibility = "visible"
-            stick25ani.classList.add('animatepopup');
-            const card25 = document.querySelector('#card25');
-
-            stick25ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card25.style.visibility = "visible";
-                    card25.classList.add('dissolve');
-                    playflippaper()
-                    card25.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card25.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000);
-            }, {once:true});
-
-        }
-        if (randomNum == 26){ //ออกใบที่ 26
-
-            stopMoving();
-            stick26.style.visibility = "visible"
-            stick26ani.classList.add('animatepopup');
-            const card26 = document.querySelector('#card26');
-
-            stick26ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card26.style.visibility = "visible";
-                    card26.classList.add('dissolve');
-                    playflippaper()
-                    card26.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card26.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 27){ //ออกใบที่ 27
-
-            stopMoving();
-            stick27.style.visibility = "visible"
-            stick27ani.classList.add('animatepopup');
-            const card27 = document.querySelector('#card27');
-
-            stick27ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card27.style.visibility = "visible";
-                    card27.classList.add('dissolve');
-                    playflippaper()
-                    card27.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card27.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 28){ //ออกใบที่ 28
-
-            stopMoving();
-            stick28.style.visibility = "visible"
-            stick28ani.classList.add('animatepopup');
-            const card28 = document.querySelector('#card28');
-
-            stick28ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card28.style.visibility = "visible";
-                    card28.classList.add('dissolve');
-                    playflippaper()
-                    card28.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card28.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 29){ //ออกใบที่ 29
-
-            stopMoving();
-            stick29.style.visibility = "visible"
-            stick29ani.classList.add('animatepopup');
-            const card29 = document.querySelector('#card29');
-
-            stick29ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card29.style.visibility = "visible";
-                    card29.classList.add('dissolve');
-                    playflippaper()
-                    card29.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card29.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
-
-        if (randomNum == 30){ //ออกใบที่ 30
-
-            stopMoving();
-            stick30.style.visibility = "visible"
-            stick30ani.classList.add('animatepopup');
-            const card30 = document.querySelector('#card30');
-
-            stick30ani.addEventListener("animationend", () => {               
-                holdTimer = setTimeout(() => {
-                    backdrop.style.visibility = "visible"
-                    card30.style.visibility = "visible";
-                    card30.classList.add('dissolve');
-                    playflippaper()
-                    card30.addEventListener("animationend", () => {
-                    
-                        continuebutton.style.visibility = "visible"
-                        
-                        card30.addEventListener ("animationend", () => {
-
-                        })
-                    })
-                }, 2000); 
-            }, {once:true});
-
-        }
+        
     }, 2000);
 
     const touch = e.touches[0];
@@ -1226,18 +545,18 @@ function stopMoving() {
 
 card.addEventListener("touchmove", function (e) { // สำหรับขยับ Div ที่รองรับ
     e.preventDefault();
-    siemsisound.volume = 1;
+    // siemsisound.volume = 1;
         
-        siemsisound.play().catch(console.error);
+    //     siemsisound.play().catch(console.error);
 
     const touch = e.touches[0];
     if (!canMove) return;
         card.style.left = (touch.clientX - offsetX) + "px";
         card.style.top  = (touch.clientY - offsetY) + "px";
         console.log("Moving...");
-        siemsisound.volume = 1;
+        // siemsisound.volume = 1;
         
-        siemsisound.play().catch(console.error);
+        // siemsisound.play().catch(console.error);
         
 });
     

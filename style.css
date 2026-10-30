@@ -46,7 +46,7 @@ body{
     height: 550px;
     /* margin-top: 40px;
     margin-left: 40px; */
-    background-image: url("img/Cover.png");
+    background-image: url("img/CoverFinal.png");
     background-position: top;
     /* background-position: center; */
     background-repeat: no-repeat;
@@ -74,20 +74,7 @@ body{
     
 }
 
-#lockercontainer{
 
-    
-    /* border: blue 5px dashed; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    width: auto;
-    height: auto;
-    
-      
-}
 
 #cardcontainer{
 
@@ -101,27 +88,27 @@ body{
 #card1{
     z-index: 5;
     width: 99%;
-    height: 500px;
-    background-image: url("img/card1.png");
+    height: 100%;
+    background-image: url("img/Fcard1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top:10px
 }
 
 #card2{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card2.png");
+    background-image: url("img/Fcard2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card3{
@@ -129,13 +116,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card3.png");
+    background-image: url("img/Fcard3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card4{
@@ -143,13 +130,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card4.png");
+    background-image: url("img/Fcard4.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card5{
@@ -157,13 +144,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card5.png");
+    background-image: url("img/Fcard5.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card6{
@@ -171,13 +158,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card6.png");
+    background-image: url("img/Fcard6.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card7{
@@ -185,13 +172,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card7.png");
+    background-image: url("img/Fcard7.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card8{
@@ -199,13 +186,13 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card8.png");
+    background-image: url("img/Fcard8.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
 #card9{
@@ -213,303 +200,28 @@ body{
     z-index: 5;
     width: 99%;
     height: 500px;
-    background-image: url("img/card9.png");
+    background-image: url("img/Fcard9.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+    top: 10px;
 }
 
-#card10{
+#lockercontainer{
+
     
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card10.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card11{
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card11.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card12{
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card12.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card13{
-
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card13.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card14{
+    /* border: white 5px dashed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* filter: drop-shadow(0px 0px 12px rgb(16, 16, 16)); */
+    width: auto;
+    height: auto;
     
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card14.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card15{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card15.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card16{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card16.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card17{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card17.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card18{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card18.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card19{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card19.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card20{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card20.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card21{
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card21.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card22{
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card22.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card23{
-
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card23.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card24{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card24.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card25{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card25.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card26{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card26.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card27{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card27.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card28{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card28.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card29{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card29.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
-}
-
-#card30{
-    
-    z-index: 5;
-    width: 99%;
-    height: 500px;
-    background-image: url("img/card30.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-    top: 100px;
+      
 }
 
 #lockerlabel{
@@ -520,11 +232,27 @@ body{
     display: flex;
     width: 356px;
     height: 356px;
-    background-image: url("img/siemsiconnumber.png");
+    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
+    background-image: url("img/locker.png");
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: 356px;
      
+    
+}
+
+#gulplogo{
+
+    /* border: blue 5px dashed; */
+    position: relative;
+    align-content: center;
+    bottom: 70px;
+    width: 75%;
+    height: 90px;
+    background-position: center;
+    background-image: url("img/gulplogo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
     
 }
 
@@ -575,7 +303,7 @@ body{
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(5, 130, 239, 0);
     font-family: "DBsiamsquare",sans-serif;
-    font-size: 16px;
+    font-size: 2rem;
     color: whitesmoke;
     /* border: rgb(0, 204, 255) 4px dashed; */
 }
@@ -827,301 +555,6 @@ body{
     height: 250px;
     /* border: rgb(55, 255, 0) 5px dashed; */
     background-image: url("img/stick/9.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick10{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/10.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick11{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/11.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick12{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/12.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick13{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/13.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick14{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/14.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick15{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/15.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick16{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/16.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick17{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/17.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick18{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/18.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick19{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/19.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick20{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/20.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick21{
-    
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/21.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick22{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/22.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick23{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/23.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick24{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/24.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick25{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/25.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick26{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/26.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick27{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/27.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick28{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/28.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick29{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/29.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25%;
-    filter: drop-shadow(0px 0px 12px rgb(16, 16, 16));
-}
-
-#stick30{
-    padding-bottom: 250px;
-    z-index: 4;
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    /* border: rgb(55, 255, 0) 5px dashed; */
-    background-image: url("img/stick/30.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 25%;
