@@ -270,7 +270,7 @@ body{
 }
 
 #returndiv{
-
+    bottom: 100px;
     z-index: 8;
     width: 100%;
     position:absolute;
@@ -297,7 +297,7 @@ body{
 #returntext{
     z-index: 4;
     left: 100px;
-    bottom: 30px;
+    bottom: 80px;
     position: relative;
     height: 30px;
     background-color: rgba(0, 0, 0, 0);
