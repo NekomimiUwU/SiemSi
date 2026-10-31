@@ -212,7 +212,7 @@ body{
 #lockercontainer{
 
     
-    border: white 5px dashed;
+    /* border: white 5px dashed; */
     display: flex;
     flex-direction: column;
     justify-content: center;
