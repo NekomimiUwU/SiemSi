@@ -119,13 +119,7 @@ function playbellsound(){
 
 }
 
-function playflippaper(){
 
-    flippaper.volume = 1;
-    
-    flippaper.play();
-    
-}
 
 function playsiemsisound(){
     
@@ -290,7 +284,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card1.style.visibility = "visible";
                     card1.classList.add('dissolve');
-                    playflippaper()
+                    
 
                     card1.addEventListener("animationend", () => {
                     
@@ -319,7 +313,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card2.style.visibility = "visible";
                     card2.classList.add('dissolve');
-                    playflippaper()
+                    
                     
                     card2.addEventListener("animationend", () => {
                     
@@ -346,7 +340,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card3.style.visibility = "visible";
                     card3.classList.add('dissolve');
-                    playflippaper()
+                    
                     card3.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -372,7 +366,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card4.style.visibility = "visible";
                     card4.classList.add('dissolve');
-                    playflippaper()
+                   
                     card4.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -398,7 +392,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card5.style.visibility = "visible";
                     card5.classList.add('dissolve');
-                    playflippaper()
+                    
                     card5.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -423,7 +417,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card6.style.visibility = "visible";
                     card6.classList.add('dissolve');
-                    playflippaper()
+                    
                     card6.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -449,7 +443,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card7.style.visibility = "visible";
                     card7.classList.add('dissolve');
-                    playflippaper()
+                   
                     card7.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -475,7 +469,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card8.style.visibility = "visible";
                     card8.classList.add('dissolve');
-                    playflippaper()
+                    
                     card8.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
@@ -501,7 +495,7 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card9.style.visibility = "visible";
                     card9.classList.add('dissolve');
-                    playflippaper()
+                    
                     card9.addEventListener("animationend", () => {
                     
                         continuebutton.style.visibility = "visible"
