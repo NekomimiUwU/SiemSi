@@ -34,7 +34,7 @@ const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
 
 
-const bellsound = new Audio("bell.mp3")
+const bellsound = new Audio("Chinesebell.mp3")
 const flippaper = new Audio("flippaper.mp3")
 const clicksound = new Audio("click.mp3")
 const siemsisound = new Audio("siemsi.mp3")
@@ -47,14 +47,6 @@ window.onload = function(){ //โหลดเข้าหน้าแรก
     returngroup.style.visibility = "hidden"
     // gamecover.style.visibility ="hidden"
     continuebutton.style.visibility = "hidden"
-
-
-
-
-
-
-
-
     card.style.visibility = "hidden" 
 
     card1.style.visibility = "hidden"
@@ -80,7 +72,7 @@ window.onload = function(){ //โหลดเข้าหน้าแรก
 
     backdrop.style.visibility = "hidden";
     
-    
+    playbellsound();
 
 }
 
@@ -113,10 +105,11 @@ function mouseUp(e){
 
 function playbellsound(){
 
+    holdTimer = setTimeout(() => {
         bellsound.volume = 1;
         bellsound.currentTime= 0;
         bellsound.play();
-
+    }, 500);    
 }
 
 
