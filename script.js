@@ -237,7 +237,7 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 1;
+const max = 9;
 let randomNum;
 
 let seconds = 0;
