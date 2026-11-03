@@ -221,6 +221,10 @@ card.addEventListener("touchstart", function(e){
 
         bellsound.volume = 0;
         bellsound.pause();
+
+        siemsisound.volume = 1;
+        siemsisound.currentTime = 0;
+        siemsisound.play();
     
     if (timer !== null) return; // Prevent duplicate timers
 
@@ -306,9 +310,11 @@ card.addEventListener("touchstart", function(e){
             siemsisound.pause();
             siemsisound.currentTime = 0;
             stick2.style.visibility = "visible"
+
             stickdrop.volume = 1;
             stickdrop.currentTime = 0;
             stickdrop.play();
+
             stick2ani.classList.add('animatepopup');
             const card2 = document.querySelector('#card2');
 
@@ -590,8 +596,7 @@ card.addEventListener("touchmove", function (e) { // สำหรับขยั
 
             
         holdTimer = setTimeout(() => {
-            siemsisound.volume = 1;
-            siemsisound.play();
+            
         }, 100);
         
         
