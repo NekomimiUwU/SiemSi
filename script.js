@@ -34,10 +34,10 @@ const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
 
 
-const bellsound = new Audio("Gong2.wav")
+const bellsound = new Audio("Gong2.mp3")
 const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
-const siemsisound = new Audio("SIEMSEESHAKE_1.wav")
+const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
 const stickdrop = new Audio("ไม้หล่น_1.wav")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
@@ -154,9 +154,9 @@ function toggleMenuOn() {
         locker.style.visibility = "visible"
         card.style.visibility = "visible"
         gamecover.style.visibility = "hidden"
-    }, 1000);
+    }, 8000);
 
-    fadeOut(bellsound, 1000); // Fade out over 1 second
+    fadeOut(bellsound, 8000); // Fade out over 1 second
 
 
     // console.log("button clicked") 
@@ -616,10 +616,10 @@ card.addEventListener("touchmove", function (e) { // สำหรับขยั
         card.style.top  = (touch.clientY - offsetY) + "px";
         console.log("Moving...");
 
-        
-        holdTimer = setTimeout(() => {
             siemsisound.volume = 1;
             siemsisound.play().catch(console.error);
+        holdTimer = setTimeout(() => {
+            
         }, 100);
         
         
