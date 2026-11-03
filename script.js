@@ -33,7 +33,7 @@ const card7 = document.getElementById("card7")
 const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
 
-const gongsound = document.getElementById("gongsound");
+const dropsound = document.getElementById("drop");
 
 const bellsound = new Audio("Gong2.wav")
 const cardshow = new Audio("Bell.wav")
@@ -106,9 +106,9 @@ function mouseUp(e){
     document.removeEventListener("mousemove" , mouseMove)
 }
 
-function playgongsound(){
-    gongsound.currentTime = 0;
-        gongsound.play().catch(error => {
+function playdropsound(){
+    dropsound.currentTime = 0;
+        dropsound.play().catch(error => {
         console.log(error);
     });
 }
