@@ -33,6 +33,7 @@ const card7 = document.getElementById("card7")
 const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
 
+const gongsound = document.getElementById("gongsound");
 
 const bellsound = new Audio("Gong2.wav")
 const cardshow = new Audio("Bell.wav")
@@ -103,6 +104,13 @@ function mouseMove(e){
 
 function mouseUp(e){
     document.removeEventListener("mousemove" , mouseMove)
+}
+
+function playgongsound(){
+    gongsound.currentTime = 0;
+        gongsound.play().catch(error => {
+        console.log(error);
+    });
 }
 
 function playbellsound(){
@@ -222,7 +230,6 @@ let canMove = true;
 
 card.addEventListener("touchstart", function(e){
 
-        bellsound.volume = 0;
         bellsound.pause();
 
         siemsisound.volume = 1;
@@ -277,9 +284,7 @@ card.addEventListener("touchstart", function(e){
 
             stopMoving();
 
-            stickdrop.volume = 1;
-            stickdrop.currentTime = 0;
-            stickdrop.play();
+            playgongsound();
 
             stick1.style.visibility = "visible"
             
