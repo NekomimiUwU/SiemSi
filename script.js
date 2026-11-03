@@ -596,6 +596,9 @@ function stopCounting() {
 function stopMoving() {
 
     canMove = false;
+    siemsisound.volume = 0;
+    siemsisound.currentTime = 0;
+    siemsisound.pause();
     
 }
 
