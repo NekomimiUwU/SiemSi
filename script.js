@@ -284,8 +284,8 @@ card.addEventListener("touchstart", function(e){
 
             stopMoving();
 
-            playgongsound();
-
+            playdropsound();
+            
             stick1.style.visibility = "visible"
             
            
