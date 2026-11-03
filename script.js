@@ -219,6 +219,8 @@ let canMove = true;
 
 card.addEventListener("touchstart", function(e){
 
+        bellsound.volume = 0;
+        bellsound.pause();
     
     if (timer !== null) return; // Prevent duplicate timers
 
