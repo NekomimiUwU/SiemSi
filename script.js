@@ -39,6 +39,7 @@ const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
 const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
 const stickdrop = new Audio("ไม้หล่น_1.wav")
+const drop = new Audio("Gong3.wav")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
 
@@ -278,8 +279,10 @@ card.addEventListener("touchstart", function(e){
            
 
             stick1.style.visibility = "visible"
-
-            playstickdropsound();
+            drop.currentTime = 0;
+            drop.volume = 1;
+            drop.play();
+            
             
            
 
