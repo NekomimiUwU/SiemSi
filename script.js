@@ -615,11 +615,12 @@ card.addEventListener("touchend", function (e) {
 
     // randomNum = Math.floor(Math.random() * max) + min;
     // console.log(randomNum);
-    siemsisound.pause();
-    siemsisound.volume = 0;
+    
     clearTimeout(holdTimer);
     stopCounting();
-
+    siemsisound.pause();
+    siemsisound.volume = 0;
+    siemsisound.currentTime = 0;
 });
 
 
