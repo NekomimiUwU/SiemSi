@@ -276,6 +276,11 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 1){ //ออกใบที่ 1
 
             stopMoving();
+
+                siemsisound.volume = 0;
+                siemsisound.currentTime = 0;
+                siemsisound.pause();
+
             stickdrop.volume = 1;
             stickdrop.currentTime = 0;
             stickdrop.play();
