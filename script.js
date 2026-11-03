@@ -134,6 +134,21 @@ function playcardshowsound(){
     cardshow.play();
 }
 
+function fadeOut(audio, duration = 1000) {
+    const interval = 50;
+    const steps = duration / interval;
+    const volumeStep = audio.volume / steps;
+
+    const fadeInterval = setInterval(() => {
+        audio.volume = Math.max(0, audio.volume - volumeStep);
+
+        if (audio.volume <= 0) {
+            clearInterval(fadeInterval);
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    }, interval);
+}
 
 
 const startbutton = document.getElementById("playbutton");
@@ -143,12 +158,14 @@ startbutton.addEventListener("click", toggleMenuOn);
 function toggleMenuOn() {
 
         playgongsound();
-
+        fadeOut(gongsound, 4000);
     holdTimer = setTimeout(() => {
+
+        
         locker.style.visibility = "visible"
         card.style.visibility = "visible"
         gamecover.style.visibility = "hidden"
-        gongsound.pause();
+        
     }, 4000);
 
     
