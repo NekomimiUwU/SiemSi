@@ -247,9 +247,6 @@ card.addEventListener("touchstart", function(e){
                        
                     console.log("2 seconds reached!");
                     stopCounting();
-                    siemsisound.volume = 0;
-                    siemsisound.currentTime = 0;
-                    siemsisound.pause();
 
                 }
         
