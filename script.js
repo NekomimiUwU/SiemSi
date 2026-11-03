@@ -237,7 +237,7 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 9;
+const max = 1;
 let randomNum;
 
 let seconds = 0;
@@ -296,8 +296,13 @@ card.addEventListener("touchstart", function(e){
             stopMoving();
             siemsisound.pause();
             siemsisound.currentTime = 0;
+            
             stick1.style.visibility = "visible"
-            playstickdropsound();
+
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
+
             stick1ani.classList.add('animatepopup');
             const card1 = document.querySelector('#card1');
 
