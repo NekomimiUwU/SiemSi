@@ -296,7 +296,7 @@ card.addEventListener("touchstart", function(e){
             stopMoving();
             siemsisound.pause();
             siemsisound.currentTime = 0;
-            
+
             stick1.style.visibility = "visible"
 
             stickdrop.volume = 1;
@@ -331,8 +331,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 2){ //ออกใบที่ 2
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick2.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick2ani.classList.add('animatepopup');
             const card2 = document.querySelector('#card2');
 
@@ -360,8 +364,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 3){ //ออกใบที่ 3
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick3.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick3ani.classList.add('animatepopup');
             const card3 = document.querySelector('#card3');
 
@@ -387,8 +395,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 4){ //ออกใบที่ 4
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick4.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick4ani.classList.add('animatepopup');
             const card4 = document.querySelector('#card4');
 
@@ -414,8 +426,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 5){ //ออกใบที่ 5
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick5.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick5ani.classList.add('animatepopup');
             const card5 = document.querySelector('#card5');
 
@@ -440,8 +456,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 6){ //ออกใบที่ 6
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick6.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick6ani.classList.add('animatepopup');
             const card6 = document.querySelector('#card6');
 
@@ -467,8 +487,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 7){ //ออกใบที่ 7
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick7.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick7ani.classList.add('animatepopup');
             const card7 = document.querySelector('#card7');
 
@@ -494,8 +518,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 8){ //ออกใบที่ 8
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick8.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick8ani.classList.add('animatepopup');
             const card8 = document.querySelector('#card8');
 
@@ -521,8 +549,12 @@ card.addEventListener("touchstart", function(e){
         if (randomNum == 9){ //ออกใบที่ 9
 
             stopMoving();
+            siemsisound.pause();
+            siemsisound.currentTime = 0;
             stick9.style.visibility = "visible"
-            playstickdropsound();
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
             stick9ani.classList.add('animatepopup');
             const card9 = document.querySelector('#card9');
 
