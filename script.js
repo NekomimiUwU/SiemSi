@@ -38,7 +38,7 @@ const bellsound = new Audio("Gong2.mp3")
 const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
 const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
-const stickdrop = new Audio("ไม้หล่น.mp3")
+const stickdrop = new Audio("ไม้หล่น.wav")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
 
@@ -210,7 +210,7 @@ const mybutton = document.getElementById("testbutton");
 const mylabel = document.getElementById("numbergen");
 
 const min = 1;
-const max = 9;
+const max = 1;
 let randomNum;
 
 let seconds = 0;
@@ -275,9 +275,10 @@ card.addEventListener("touchstart", function(e){
 
             stick1.style.visibility = "visible"
 
+            stickdrop.play();
             stickdrop.volume = 1;
             stickdrop.currentTime = 0;
-            stickdrop.play();
+           
 
             stick1ani.classList.add('animatepopup');
             const card1 = document.querySelector('#card1');
@@ -288,9 +289,11 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card1.style.visibility = "visible";
                     card1.classList.add('dissolve');
+
+                    cardshow.play();
                     cardshow.volume = 1;
                     cardshow.currentTime = 0;
-                    cardshow.play();
+                    
                     
                     card1.addEventListener("animationend", () => {
                         
@@ -313,9 +316,10 @@ card.addEventListener("touchstart", function(e){
             siemsisound.currentTime = 0;
             stick2.style.visibility = "visible"
 
+            stickdrop.play();
             stickdrop.volume = 1;
             stickdrop.currentTime = 0;
-            stickdrop.play();
+            
 
             stick2ani.classList.add('animatepopup');
             const card2 = document.querySelector('#card2');
