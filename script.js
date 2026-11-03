@@ -38,7 +38,7 @@ const bellsound = new Audio("Gong2.mp3")
 const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
 const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
-const stickdrop = new Audio("ไม้หล่น_1.wav")
+const stickdrop = new Audio("Gong2.mp3")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
 
@@ -603,9 +603,6 @@ function stopCounting() {
 function stopMoving() {
 
     canMove = false;
-    siemsisound.volume = 0;
-    siemsisound.currentTime = 0;
-    siemsisound.pause();
     
 }
 
@@ -646,9 +643,6 @@ card.addEventListener("touchend", function (e) {
     
     clearTimeout(holdTimer);
     stopCounting();
-    siemsisound.pause();
-    siemsisound.volume = 0;
-    siemsisound.currentTime = 0;
 });
 
 
