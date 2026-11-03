@@ -39,7 +39,7 @@ const gongsound = document.getElementById("gong");
 const bellsound = new Audio("Gong2.wav")
 const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
-const siemsisound = new Audio("SIEMSEESHAKE_1.wav")
+const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
 const stickdrop = new Audio("ไม้หล่น_1.wav")
 const drop = new Audio("Gong3.wav")
 
@@ -355,7 +355,7 @@ card.addEventListener("touchstart", function(e){
             playdropsound();
             stick3ani.classList.add('animatepopup');
             const card3 = document.querySelector('#card3');
-            
+
             stick3ani.addEventListener("animationend", () => {               
                 holdTimer = setTimeout(() => {
                     backdrop.style.visibility = "visible"
