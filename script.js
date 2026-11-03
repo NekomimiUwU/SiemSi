@@ -112,22 +112,6 @@ function playbellsound(){
     
 }
 
-function fadeOut(audio, duration = 1000) {
-    const interval = 50;
-    const steps = duration / interval;
-    const volumeStep = audio.volume / steps;
-
-    const fadeInterval = setInterval(() => {
-        audio.volume = Math.max(0, audio.volume - volumeStep);
-
-        if (audio.volume <= 0) {
-            clearInterval(fadeInterval);
-            audio.pause();
-            audio.currentTime = 0;
-        }
-    }, interval);
-}
-
 function playstickdropsound(){
     stickdrop.volume = 1;
     stickdrop.currentTime = 0;
@@ -235,9 +219,6 @@ let canMove = true;
 
 card.addEventListener("touchstart", function(e){
 
-    bellsound.currentTime = 0;
-    bellsound.pause();
-    bellsound.volume = 0;
     
     if (timer !== null) return; // Prevent duplicate timers
 
@@ -304,7 +285,7 @@ card.addEventListener("touchstart", function(e){
                     playcardshowsound()
                     
                     card1.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card1.addEventListener ("animationend", () => {
@@ -338,7 +319,7 @@ card.addEventListener("touchstart", function(e){
                     playcardshowsound()
                     
                     card2.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card2.addEventListener ("animationend", () => {
@@ -369,7 +350,7 @@ card.addEventListener("touchstart", function(e){
                     card3.classList.add('dissolve');
                     playcardshowsound()
                     card3.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card3.addEventListener ("animationend", () => {
@@ -400,7 +381,7 @@ card.addEventListener("touchstart", function(e){
                     card4.classList.add('dissolve');
                     playcardshowsound()
                     card4.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                       
                         continuebutton.style.visibility = "visible"
                         
                         card4.addEventListener ("animationend", () => {
@@ -431,7 +412,7 @@ card.addEventListener("touchstart", function(e){
                     card5.classList.add('dissolve');
                     playcardshowsound()
                     card5.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card5.addEventListener ("animationend", () => {
@@ -461,7 +442,7 @@ card.addEventListener("touchstart", function(e){
                     card6.classList.add('dissolve');
                     playcardshowsound()
                     card6.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card6.addEventListener ("animationend", () => {
@@ -492,7 +473,7 @@ card.addEventListener("touchstart", function(e){
                     card7.classList.add('dissolve');
                     playcardshowsound()
                     card7.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card7.addEventListener ("animationend", () => {
@@ -523,7 +504,7 @@ card.addEventListener("touchstart", function(e){
                     card8.classList.add('dissolve');
                     playcardshowsound()
                     card8.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card8.addEventListener ("animationend", () => {
@@ -554,7 +535,7 @@ card.addEventListener("touchstart", function(e){
                     card9.classList.add('dissolve');
                     playcardshowsound()
                     card9.addEventListener("animationend", () => {
-                        fadeOut(cardshow, 1000); // Fade out over 1 second
+                        
                         continuebutton.style.visibility = "visible"
                         
                         card9.addEventListener ("animationend", () => {
@@ -605,10 +586,10 @@ card.addEventListener("touchmove", function (e) { // สำหรับขยั
         card.style.top  = (touch.clientY - offsetY) + "px";
         console.log("Moving...");
 
-            siemsisound.volume = 1;
-            siemsisound.play().catch(console.error);
-        holdTimer = setTimeout(() => {
             
+        holdTimer = setTimeout(() => {
+            siemsisound.volume = 1;
+            siemsisound.play();
         }, 100);
         
         
