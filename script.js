@@ -37,7 +37,7 @@ const card9 = document.getElementById("card9")
 const bellsound = new Audio("Gong2.mp3")
 const cardshow = new Audio("Bell.wav")
 const clicksound = new Audio("click.mp3")
-const siemsisound = new Audio("SIEMSEESHAKE_1.wav")
+const siemsisound = new Audio("SIEMSEESHAKE_1.mp3")
 const stickdrop = new Audio("ไม้หล่น.mp3")
 
 window.onload = function(){ //โหลดเข้าหน้าแรก 
@@ -288,7 +288,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card1.style.visibility = "visible";
                     card1.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     
                     card1.addEventListener("animationend", () => {
                         
@@ -324,7 +326,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card2.style.visibility = "visible";
                     card2.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     
                     card2.addEventListener("animationend", () => {
                         
@@ -356,7 +360,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card3.style.visibility = "visible";
                     card3.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card3.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
@@ -387,7 +393,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card4.style.visibility = "visible";
                     card4.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card4.addEventListener("animationend", () => {
                        
                         continuebutton.style.visibility = "visible"
@@ -418,7 +426,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card5.style.visibility = "visible";
                     card5.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card5.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
@@ -448,7 +458,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card6.style.visibility = "visible";
                     card6.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card6.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
@@ -479,7 +491,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card7.style.visibility = "visible";
                     card7.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card7.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
@@ -510,7 +524,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card8.style.visibility = "visible";
                     card8.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card8.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
@@ -541,7 +557,9 @@ card.addEventListener("touchstart", function(e){
                     backdrop.style.visibility = "visible"
                     card9.style.visibility = "visible";
                     card9.classList.add('dissolve');
-                    playcardshowsound()
+                    cardshow.volume = 1;
+                    cardshow.currentTime = 0;
+                    cardshow.play();
                     card9.addEventListener("animationend", () => {
                         
                         continuebutton.style.visibility = "visible"
