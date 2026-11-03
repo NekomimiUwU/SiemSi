@@ -34,6 +34,7 @@ const card8 = document.getElementById("card8")
 const card9 = document.getElementById("card9")
 
 const dropsound = document.getElementById("drop");
+const gongsound = document.getElementById("gong");
 
 const bellsound = new Audio("Gong2.wav")
 const cardshow = new Audio("Bell.wav")
@@ -113,12 +114,12 @@ function playdropsound(){
     });
 }
 
-function playbellsound(){
+function playgongsound(){
 
-        bellsound.volume = 1;
-        bellsound.currentTime= 0;
-        bellsound.play();
-    
+    gongsound.currentTime = 0;
+    gongsound.play().catch(error => {
+        console.log(error);    
+    });
 }
 
 function playstickdropsound(){
@@ -141,16 +142,13 @@ startbutton.addEventListener("click", toggleMenuOn);
 
 function toggleMenuOn() {
 
-        bellsound.volume = 1;
-        bellsound.currentTime= 0;
-        bellsound.play();
+        playgongsound();
 
     holdTimer = setTimeout(() => {
         locker.style.visibility = "visible"
         card.style.visibility = "visible"
         gamecover.style.visibility = "hidden"
-        bellsound.volume = 0;
-        bellsound.pause();
+        gongsound.pause();
     }, 10000);
 
     
@@ -232,9 +230,9 @@ card.addEventListener("touchstart", function(e){
 
         bellsound.pause();
 
-        siemsisound.volume = 1;
-        siemsisound.currentTime = 0;
-        siemsisound.play();
+        // siemsisound.volume = 1;
+        // siemsisound.currentTime = 0;
+        // siemsisound.play();
     
     if (timer !== null) return; // Prevent duplicate timers
 
