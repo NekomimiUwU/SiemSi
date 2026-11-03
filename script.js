@@ -246,7 +246,9 @@ let canMove = true;
 
 card.addEventListener("touchstart", function(e){
 
-    
+    bellsound.pause();
+    bellsound.volume = 0;
+    bellsound.currentTime = 0;
 
     if (timer !== null) return; // Prevent duplicate timers
 
@@ -599,6 +601,7 @@ card.addEventListener("touchend", function (e) {
 
     // randomNum = Math.floor(Math.random() * max) + min;
     // console.log(randomNum);
+    siemsisound.pause();
     siemsisound.volume = 0;
     clearTimeout(holdTimer);
     stopCounting();
