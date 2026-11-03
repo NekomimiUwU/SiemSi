@@ -242,6 +242,9 @@ card.addEventListener("touchstart", function(e){
                        
                     console.log("2 seconds reached!");
                     stopCounting();
+                    siemsisound.volume = 0;
+                    siemsisound.currentTime = 0;
+                    siemsisound.pause();
 
                 }
         
@@ -268,19 +271,16 @@ card.addEventListener("touchstart", function(e){
         const stick8ani = document.querySelector('#stick8');
         const stick9ani = document.querySelector('#stick9');
         
-        siemsisound.volume = 0;
-        siemsisound.currentTime = 0;
-        siemsisound.pause();
+        
 
         if (randomNum == 1){ //ออกใบที่ 1
 
             stopMoving();
-
-           
+            stickdrop.volume = 1;
+            stickdrop.currentTime = 0;
+            stickdrop.play();
 
             stick1.style.visibility = "visible"
-            
-            
             
            
 
