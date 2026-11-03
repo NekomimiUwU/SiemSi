@@ -154,9 +154,10 @@ function toggleMenuOn() {
         locker.style.visibility = "visible"
         card.style.visibility = "visible"
         gamecover.style.visibility = "hidden"
+        fadeOut(bellsound, 8000); // Fade out over 1 second
     }, 8000);
 
-    fadeOut(bellsound, 8000); // Fade out over 1 second
+    
 
 
     // console.log("button clicked") 
