@@ -132,7 +132,9 @@ startbutton.addEventListener("click", toggleMenuOn);
 
 function toggleMenuOn() {
 
-    playbellsound();
+        bellsound.volume = 1;
+        bellsound.currentTime= 0;
+        bellsound.play();
 
     holdTimer = setTimeout(() => {
         locker.style.visibility = "visible"
@@ -265,13 +267,15 @@ card.addEventListener("touchstart", function(e){
         const stick8ani = document.querySelector('#stick8');
         const stick9ani = document.querySelector('#stick9');
         
-
+        siemsisound.volume = 0;
+        siemsisound.currentTime = 0;
+        siemsisound.pause();
 
         if (randomNum == 1){ //ออกใบที่ 1
 
             stopMoving();
-            siemsisound.pause();
-            siemsisound.currentTime = 0;
+
+           
 
             stick1.style.visibility = "visible"
 
