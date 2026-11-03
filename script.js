@@ -279,7 +279,7 @@ card.addEventListener("touchstart", function(e){
 
             stick1.style.visibility = "visible"
 
-            stickdrop.play();
+            stickdrop.play().catch(console.error);
             stickdrop.volume = 1;
             stickdrop.currentTime = 0;
            
