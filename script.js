@@ -149,7 +149,7 @@ function toggleMenuOn() {
         card.style.visibility = "visible"
         gamecover.style.visibility = "hidden"
         gongsound.pause();
-    }, 10000);
+    }, 4000);
 
     
 
